@@ -28,7 +28,7 @@ export function LampDemo() {
         }}
         className="mt-4 text-white text-slate-300 text-center text-lg md:text-xl"
       >
-        Cutting-edge AI solutions for automation, chat agents, and business growth
+        AI solutions for automations, lead-gen, chat agents, and business growth
       </motion.p>
       <motion.div
         initial={{ opacity: 0, y: 100 }}
