@@ -103,6 +103,24 @@ const ContactSection = () => {
                 ))}
               </div>
             </div>
+
+            <div className="card p-8">
+              <h3 className="text-2xl font-semibold mb-4">Why Choose Us?</h3>
+              <ul className="space-y-3 text-text-secondary">
+                <li className="flex items-center space-x-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                  <span>Proven track record of successful AI implementations</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                  <span>Customized solutions for your specific needs</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                  <span>Dedicated support throughout the process</span>
+                </li>
+              </ul>
+            </div>
           </motion.div>
 
           <motion.div
@@ -142,41 +160,6 @@ const ContactSection = () => {
                     placeholder="john@example.com"
                   />
                 </div>
-              </div>
-
-              <div>
-                <label htmlFor="company" className="block text-sm font-medium text-text-secondary mb-2">
-                  Company Name
-                </label>
-                <input
-                  type="text"
-                  id="company"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 bg-background border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                  placeholder="Your Company"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="service" className="block text-sm font-medium text-text-secondary mb-2">
-                  Service Interested In
-                </label>
-                <select
-                  id="service"
-                  name="service"
-                  value={formData.service}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-background border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                >
-                  <option value="">Select a service</option>
-                  <option value="ai-automation">AI Automation</option>
-                  <option value="chat-agents">Chat Agents</option>
-                  <option value="voice-agents">Voice Agents</option>
-                  <option value="custom-solution">Custom Solution</option>
-                </select>
               </div>
 
               <div>
