@@ -55,12 +55,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
             <ul className="space-y-4">
-              <li className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-primary mt-0.5" />
-                <span className="text-text-secondary">123 Innovation Drive, Tech City, CA 90210</span>
-              </li>
               <li className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-primary" />
                 <a href="tel:+1234567890" className="text-text-secondary hover:text-primary transition-colors">+1 (234) 567-890</a>
