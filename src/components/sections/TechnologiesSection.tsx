@@ -1,9 +1,9 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
+import { Bot, Workflow, Cog, Sparkles } from 'lucide-react';
 
-// Mock logos - in a real project, you would import actual SVG or PNG files
-const TechnologyItem = ({ name, logo, delay }: { name: string; logo: string; delay: number }) => {
+const TechnologyItem = ({ name, icon: Icon, delay }: { name: string; icon: React.ElementType; delay: number }) => {
   return (
     <motion.div 
       className="flex flex-col items-center"
@@ -12,11 +12,7 @@ const TechnologyItem = ({ name, logo, delay }: { name: string; logo: string; del
       transition={{ duration: 0.5, delay }}
     >
       <div className="w-20 h-20 md:w-24 md:h-24 rounded-xl flex items-center justify-center bg-white/5 border border-white/10 p-4 mb-3 hover:border-primary/50 transition-all duration-300">
-        <img 
-          src={logo} 
-          alt={name} 
-          className="w-full h-full object-contain"
-        />
+        <Icon className="w-12 h-12 text-primary" />
       </div>
       <span className="text-sm text-text-secondary">{name}</span>
     </motion.div>
@@ -31,36 +27,20 @@ const TechnologiesSection = () => {
 
   const technologies = [
     { 
-      name: "TensorFlow", 
-      logo: "https://images.pexels.com/photos/11035471/pexels-photo-11035471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      name: "Voiceflow", 
+      icon: Bot
     },
     { 
-      name: "PyTorch", 
-      logo: "https://images.pexels.com/photos/11035380/pexels-photo-11035380.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      name: "n8n", 
+      icon: Workflow
+    },
+    { 
+      name: "Make.com", 
+      icon: Cog
     },
     { 
       name: "OpenAI", 
-      logo: "https://images.pexels.com/photos/11035386/pexels-photo-11035386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    },
-    { 
-      name: "Hugging Face", 
-      logo: "https://images.pexels.com/photos/11035534/pexels-photo-11035534.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    },
-    { 
-      name: "Google Cloud", 
-      logo: "https://images.pexels.com/photos/11035382/pexels-photo-11035382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    },
-    { 
-      name: "AWS", 
-      logo: "https://images.pexels.com/photos/11035472/pexels-photo-11035472.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    },
-    { 
-      name: "Azure", 
-      logo: "https://images.pexels.com/photos/11035516/pexels-photo-11035516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    },
-    { 
-      name: "Salesforce", 
-      logo: "https://images.pexels.com/photos/11035381/pexels-photo-11035381.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      icon: Sparkles
     }
   ];
 
@@ -82,7 +62,7 @@ const TechnologiesSection = () => {
             Our Tech Stack
           </h2>
           <p className="text-lg text-text-secondary">
-            We work with trusted, widely-used technologies that fit right into your existing setup. Rather than pushing new or complicated systems, we focus on tools that align with what your team already knows—ensuring smooth integration, minimal disruption, and real impact from day one.
+            We leverage industry-leading tools and platforms to deliver powerful AI solutions that drive real business results.
           </p>
         </motion.div>
 
@@ -92,7 +72,7 @@ const TechnologiesSection = () => {
               <TechnologyItem 
                 key={tech.name} 
                 name={tech.name} 
-                logo={tech.logo} 
+                icon={tech.icon}
                 delay={index * 0.1}
               />
             ))}
@@ -106,7 +86,7 @@ const TechnologiesSection = () => {
           transition={{ duration: 0.5, delay: 0.8 }}
         >
           <p className="text-text-secondary mb-6">
-            Our technology stack is continuously evolving to incorporate the latest advancements in AI and machine learning.
+            Our technology stack is carefully chosen to provide the most efficient and effective solutions for your business needs.
           </p>
           <a href="#contact" className="btn btn-outline">
             Discuss Your Technology Needs
