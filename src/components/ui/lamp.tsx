@@ -16,8 +16,33 @@ export function LampDemo() {
         }}
         className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
       >
-        Build lamps <br /> the right way
+        Transform Your Business <br /> With AI Innovation
       </motion.h1>
+      <motion.p
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.5,
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
+        className="mt-4 text-slate-300 text-center text-lg md:text-xl"
+      >
+        Cutting-edge AI solutions for automation, chat agents, and business growth
+      </motion.p>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.7,
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
+      >
+        <a href="#contact" className="mt-8 inline-block px-8 py-3 bg-cyan-500 text-white rounded-full font-medium hover:bg-cyan-600 transition-colors">
+          Get Started
+        </a>
+      </motion.div>
     </LampContainer>
   );
 }
