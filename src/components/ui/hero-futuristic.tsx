@@ -89,7 +89,15 @@ export const HeroFuturistic = () => {
   }, [visibleWords, titleWords.length]);
 
   const handleCanvasError = () => {
+    console.log('WebGL context creation failed, falling back to 2D background');
     setWebGLFailed(true);
+  };
+
+  const handleCanvasCreated = (state: any) => {
+    if (!state.gl.capabilities.isWebGL2) {
+      console.log('WebGL 2 not supported, falling back to 2D background');
+      setWebGLFailed(true);
+    }
   };
 
   return (
@@ -129,7 +137,7 @@ export const HeroFuturistic = () => {
       {webGLFailed ? (
         <FallbackBackground />
       ) : (
-        <Canvas onCreated={() => {}} onError={handleCanvasError}>
+        <Canvas onCreated={handleCanvasCreated} onError={handleCanvasError}>
           <Scene />
         </Canvas>
       )}
