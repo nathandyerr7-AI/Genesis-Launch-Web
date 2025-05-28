@@ -78,25 +78,6 @@ const AboutSection = () => {
             </motion.div>
           ))}
         </div>
-
-        <motion.div 
-          className="mt-16 p-8 rounded-xl bg-background-light border border-gray-800 relative overflow-hidden"
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          variants={fadeIn}
-          transition={{ duration: 0.5, delay: 0.6 }}
-        >
-          <div className="absolute -right-10 -top-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
-          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="text-center md:text-left">
-              <h3 className="text-2xl font-bold mb-2">Ready to transform your business?</h3>
-              <p className="text-text-secondary">Let's discuss how our AI solutions can help you achieve your goals.</p>
-            </div>
-            <a href="#contact" className="btn btn-primary whitespace-nowrap">
-              Get in Touch
-            </a>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
