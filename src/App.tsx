@@ -29,6 +29,7 @@ function App() {
         <LampDemo />
         <ServicesSection />
         <TechnologiesSection />
+        <AboutSection />
         <ContactSection />
       </main>
       <Footer />
