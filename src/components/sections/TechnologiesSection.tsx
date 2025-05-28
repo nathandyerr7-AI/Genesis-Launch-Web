@@ -79,10 +79,10 @@ const TechnologiesSection = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="section-heading text-3xl md:text-4xl font-bold">
-            Technologies We Use
+            Our Tech Stack
           </h2>
           <p className="text-lg text-text-secondary">
-            We leverage cutting-edge technologies and platforms to build powerful, scalable, and efficient AI solutions for our clients.
+            We work with trusted, widely-used technologies that fit right into your existing setup. Rather than pushing new or complicated systems, we focus on tools that align with what your team already knows—ensuring smooth integration, minimal disruption, and real impact from day one.
           </p>
         </motion.div>
 
