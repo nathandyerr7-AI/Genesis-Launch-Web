@@ -54,6 +54,16 @@ const Scene = () => {
   );
 };
 
+const FallbackBackground = () => (
+  <div 
+    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+    style={{ 
+      backgroundImage: `url(${TEXTUREMAP.src})`,
+      filter: 'brightness(0.6)',
+    }}
+  />
+);
+
 export const HeroFuturistic = () => {
   const titleWords = 'Build Your Dreams'.split(' ');
   const subtitle = 'AI-powered creativity for the next generation.';
@@ -61,6 +71,7 @@ export const HeroFuturistic = () => {
   const [subtitleVisible, setSubtitleVisible] = useState(false);
   const [delays, setDelays] = useState<number[]>([]);
   const [subtitleDelay, setSubtitleDelay] = useState(0);
+  const [webGLFailed, setWebGLFailed] = useState(false);
 
   useEffect(() => {
     setDelays(titleWords.map(() => Math.random() * 0.07));
@@ -76,6 +87,10 @@ export const HeroFuturistic = () => {
       return () => clearTimeout(timeout);
     }
   }, [visibleWords, titleWords.length]);
+
+  const handleCanvasError = () => {
+    setWebGLFailed(true);
+  };
 
   return (
     <div className="h-screen">
@@ -111,9 +126,13 @@ export const HeroFuturistic = () => {
         <span className="explore-arrow ml-2 inline-block">↓</span>
       </button>
 
-      <Canvas>
-        <Scene />
-      </Canvas>
+      {webGLFailed ? (
+        <FallbackBackground />
+      ) : (
+        <Canvas onCreated={() => {}} onError={handleCanvasError}>
+          <Scene />
+        </Canvas>
+      )}
     </div>
   );
 };
