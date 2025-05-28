@@ -27,7 +27,6 @@ function App() {
       <Navbar />
       <main>
         <LampDemo />
-        <AboutSection />
         <ServicesSection />
         <TechnologiesSection />
         <ContactSection />
