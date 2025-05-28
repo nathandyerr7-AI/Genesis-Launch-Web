@@ -51,15 +51,9 @@ const ContactSection = () => {
     {
       icon: <Phone className="h-6 w-6 text-primary" />,
       title: "Phone",
-      content: "+1 (234) 567-890",
-      link: "tel:+1234567890"
+      content: "+1 (613) 862-1476",
+      link: "tel:+16138621476"
     },
-    {
-      icon: <MapPin className="h-6 w-6 text-primary" />,
-      title: "Office",
-      content: "123 Innovation Drive, Tech City, CA 90210",
-      link: "https://maps.google.com"
-    }
   ];
 
   return (
@@ -78,7 +72,7 @@ const ContactSection = () => {
         >
           <h2 className="text-4xl font-bold mb-4">Let's Build Something Amazing</h2>
           <p className="text-lg text-text-secondary">
-            Ready to transform your business with AI? We're here to help you get started.
+            Ready to bring your ideas to life with AI? We're here to help you get started.
           </p>
         </motion.div>
 
