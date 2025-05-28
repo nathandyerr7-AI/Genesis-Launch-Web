@@ -41,7 +41,7 @@ const ContactSection = () => {
     {
       icon: <Mail className="h-6 w-6 text-primary" />,
       title: "Email",
-      content: "hello@genesislaunch.ai",
+      content: "hello@genesislaunch.com",
       link: "mailto:hello@genesislaunch.ai"
     },
     {
