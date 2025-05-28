@@ -23,6 +23,7 @@ export default {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(var(--conic-position), var(--tw-gradient-stops))',
       },
       boxShadow: {
         'glow-primary': '0 0 15px var(--primary-glow)',
