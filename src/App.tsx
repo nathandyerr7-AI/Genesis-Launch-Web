@@ -30,8 +30,6 @@ function App() {
         <AboutSection />
         <ServicesSection />
         <TechnologiesSection />
-        {/* <PortfolioSection /> */}
-        
         <ContactSection />
       </main>
       <Footer />
