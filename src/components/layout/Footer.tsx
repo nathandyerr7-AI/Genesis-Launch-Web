@@ -14,7 +14,6 @@ const Footer = () => {
               <span className="text-xl font-bold text-white">Genesis<span className="text-primary">Launch</span></span>
             </div>
             <p className="text-text-secondary mb-4">
-              Leading the charge in AI innovation, providing cutting-edge solutions for businesses ready to evolve.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-primary transition-colors">
