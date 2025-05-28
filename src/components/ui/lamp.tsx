@@ -39,7 +39,7 @@ export function LampDemo() {
           ease: "easeInOut",
         }}
       >
-        <a href="#contact" className="mt-12 inline-block px-8 py-3 btn btn-primary text-white rounded-full font-medium hover:bg-cyan-600 transition-colors">
+        <a href="#contact" className="mt-14 inline-block px-8 py-3 btn btn-primary text-white rounded-full font-medium hover:bg-cyan-600 transition-colors">
           Get Started
         </a>
       </motion.div>
