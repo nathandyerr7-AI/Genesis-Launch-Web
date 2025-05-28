@@ -16,7 +16,7 @@ export function LampDemo() {
         }}
         className="mt-59 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
       >
-        Transform Your Business <br /> With AI Innovation
+        Solve Real Business Problems <br /> With Practical AI Solutions
       </motion.h1>
       <motion.p
         initial={{ opacity: 0, y: 100 }}
