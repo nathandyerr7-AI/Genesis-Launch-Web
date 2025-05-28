@@ -26,7 +26,7 @@ export function LampDemo() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="mt-4 text-white text-slate-300 text-center text-lg md:text-xl"
+        className="mt-4 text-white text-slate-300 text-center text-lg md:text-xl glow-text"
       >
         AI solutions for automations, lead-gen, chat agents, and business growth
       </motion.p>
