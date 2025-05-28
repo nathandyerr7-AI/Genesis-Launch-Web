@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
+import { HeroFuturistic } from './components/ui/hero-futuristic';
 import AboutSection from './components/sections/AboutSection';
 import ServicesSection from './components/sections/ServicesSection';
 import TechnologiesSection from './components/sections/TechnologiesSection';
@@ -25,6 +26,7 @@ function App() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main>
+        <HeroFuturistic />
         <AboutSection />
         <ServicesSection />
         <TechnologiesSection />
