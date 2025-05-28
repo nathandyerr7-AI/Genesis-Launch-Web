@@ -16,7 +16,7 @@ export function LampDemo() {
         }}
         className="mt-50 text-white py-4 text-center text-4xl font-medium tracking-tight md:text-7xl"
       >
-        Practical AI Solutions <br /> With Solve Real Business Problems
+        Practical AI Solutions That<br /> Solve Real Business Problems
       </motion.h1>
       <motion.p
         initial={{ opacity: 0, y: 100 }}
