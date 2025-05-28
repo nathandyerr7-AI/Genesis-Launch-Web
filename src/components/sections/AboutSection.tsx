@@ -56,7 +56,7 @@ const AboutSection = () => {
             About Genesis Launch
           </h2>
           <p className="text-lg text-text-secondary">
-            We’re a team of AI specialists, developers, and strategists focused on solving real business challenges with practical, results-driven               solutions. By combining technical expertise with a sharp understanding of business needs, we deliver custom AI tools and solutions that              streamline operations, boost productivity, and unlock new opportunities for growth.
+            We’re a team of AI specialists, developers, and strategists focused on solving real business challenges with practical, results-driven               solutions. By combining technical expertise with a sharp understanding of business needs, we deliver custom AI solutions that              streamline operations, boost productivity, and unlock new opportunities for growth.
           </p>
         </motion.div>
 
