@@ -103,24 +103,6 @@ const ContactSection = () => {
                 ))}
               </div>
             </div>
-
-            <div className="card p-8">
-              <h3 className="text-2xl font-semibold mb-4">Why Choose Us?</h3>
-              <ul className="space-y-3 text-text-secondary">
-                <li className="flex items-center space-x-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                  <span>Proven track record of successful AI implementations</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                  <span>Customized solutions for your specific needs</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                  <span>Dedicated support throughout the process</span>
-                </li>
-              </ul>
-            </div>
           </motion.div>
 
           <motion.div
