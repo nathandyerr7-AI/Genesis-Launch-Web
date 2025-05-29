@@ -13,14 +13,14 @@ function FloatingPaths({ position }: { position: number }) {
         } ${343 - i * 6}C${616 - i * 5 * position} ${470 - i * 6} ${
             684 - i * 5 * position
         } ${875 - i * 6} ${684 - i * 5 * position} ${875 - i * 6}`,
-        color: `rgba(15,23,42,${0.1 + i * 0.03})`,
+        color: `var(--primary)`,
         width: 0.5 + i * 0.03,
     }));
 
     return (
         <div className="absolute inset-0 pointer-events-none">
             <svg
-                className="w-full h-full text-slate-950 dark:text-white"
+                className="w-full h-full text-primary"
                 viewBox="0 0 696 316"
                 fill="none"
             >
@@ -115,10 +115,9 @@ export function BackgroundPaths({
                         transition={{ delay: 0.7, duration: 0.8 }}
                     >
                         <Button
-                            variant="ghost"
                             className="rounded-2xl px-8 py-6 text-lg font-semibold 
-                            bg-white/5 hover:bg-white/10 text-white transition-all duration-300 
-                            hover:-translate-y-0.5 border border-white/10"
+                            bg-primary hover:bg-primary/90 text-white transition-all duration-300 
+                            hover:-translate-y-0.5 border border-primary/20"
                         >
                             <span className="opacity-90 group-hover:opacity-100 transition-opacity">
                                 Get Started
