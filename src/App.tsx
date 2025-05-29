@@ -9,6 +9,7 @@ import TechnologiesSection from './components/sections/TechnologiesSection';
 import ContactSection from './components/sections/ContactSection';
 import ChatWidget from './components/widgets/ChatWidget';
 import CookiesPolicy from './components/pages/CookiesPolicy';
+import CookieConsent from './components/widgets/CookieConsent';
 
 function HomePage() {
   return (
@@ -24,14 +25,29 @@ function HomePage() {
 
 function App() {
   const [showWidget, setShowWidget] = useState(false);
+  const [showCookieConsent, setShowCookieConsent] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowWidget(true);
     }, 3000);
     
+    const hasAcceptedCookies = localStorage.getItem('cookiesAccepted');
+    if (!hasAcceptedCookies) {
+      setShowCookieConsent(true);
+    }
+    
     return () => clearTimeout(timer);
   }, []);
+
+  const handleAcceptCookies = () => {
+    localStorage.setItem('cookiesAccepted', 'true');
+    setShowCookieConsent(false);
+  };
+
+  const handleCloseCookieConsent = () => {
+    setShowCookieConsent(false);
+  };
 
   return (
     <Router>
@@ -45,9 +61,13 @@ function App() {
         </main>
         <Footer />
         {showWidget && <ChatWidget />}
+        {showCookieConsent && (
+          <CookieConsent
+            onAccept={handleAcceptCookies}
+            onClose={handleCloseCookieConsent}
+          />
+        )}
       </div>
     </Router>
   );
 }
-
-export default App;
