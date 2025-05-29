@@ -16,7 +16,6 @@ const Footer = () => {
             </div>
             <p className="text-text-secondary mb-4">
             </p>
-           
           </div>
 
           <div>
