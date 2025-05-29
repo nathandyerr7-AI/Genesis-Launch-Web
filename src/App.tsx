@@ -9,6 +9,8 @@ import TechnologiesSection from './components/sections/TechnologiesSection';
 import ContactSection from './components/sections/ContactSection';
 import ChatWidget from './components/widgets/ChatWidget';
 import CookiesPolicy from './components/pages/CookiesPolicy';
+import PrivacyPolicy from './components/pages/PrivacyPolicy';
+import TermsOfService from './components/pages/TermsOfService';
 import CookieConsent from './components/widgets/CookieConsent';
 
 function HomePage() {
@@ -57,6 +59,8 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/cookies-policy" element={<CookiesPolicy />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
           </Routes>
         </main>
         <Footer />
@@ -72,4 +76,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
