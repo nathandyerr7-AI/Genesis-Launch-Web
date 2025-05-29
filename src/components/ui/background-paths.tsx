@@ -58,6 +58,7 @@ export function BackgroundPaths({
 }) {
     const words = title.split(" ");
     const navigate = useNavigate();
+    const [isOpen, setIsOpen] = useState(false);
 
     const handleNavigation = (path: string) => {
     setIsOpen(false);
