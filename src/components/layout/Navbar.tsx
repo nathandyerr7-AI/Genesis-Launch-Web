@@ -1,13 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Zap } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleNavigation = (path: string) => {
+    setIsOpen(false);
+    if (path.startsWith('/#')) {
+      const element = document.querySelector(path.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      navigate(path);
+    }
   };
 
   useEffect(() => {
@@ -42,27 +55,30 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center space-x-2">
+          <div onClick={() => handleNavigation('/')} className="flex items-center space-x-2 cursor-pointer">
             <Zap className="h-8 w-8 text-primary" />
             <span className="text-xl md:text-2xl font-bold text-white">Genesis<span className="text-primary">Launch</span></span>
-          </Link>
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             {navLinks.map((link) => (
-              <Link
+              <button
                 key={link.name}
-                to={link.href}
+                onClick={() => handleNavigation(link.href)}
                 className="text-sm font-medium text-text-secondary hover:text-primary transition-colors"
               >
                 {link.name}
-              </Link>
+              </button>
             ))}
           </nav>
 
-          <Link to="/#contact" className="hidden md:inline-flex btn btn-primary">
+          <button 
+            onClick={() => handleNavigation('/#contact')} 
+            className="hidden md:inline-flex btn btn-primary"
+          >
             Get Started
-          </Link>
+          </button>
 
           {/* Mobile menu button */}
           <button 
@@ -78,22 +94,20 @@ const Navbar = () => {
       <div className={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
         <div className="px-2 pt-2 pb-4 bg-background-light/95 backdrop-blur-lg space-y-1 border-t border-gray-800">
           {navLinks.map((link) => (
-            <Link
+            <button
               key={link.name}
-              to={link.href}
-              className="block px-3 py-2 text-base font-medium text-text-secondary hover:text-primary transition-colors"
-              onClick={() => setIsOpen(false)}
+              onClick={() => handleNavigation(link.href)}
+              className="block w-full text-left px-3 py-2 text-base font-medium text-text-secondary hover:text-primary transition-colors"
             >
               {link.name}
-            </Link>
+            </button>
           ))}
-          <Link 
-            to="/#contact" 
-            className="block px-3 py-2 mt-4 text-center btn btn-primary w-full"
-            onClick={() => setIsOpen(false)}
+          <button 
+            onClick={() => handleNavigation('/#contact')}
+            className="block w-full px-3 py-2 mt-4 text-center btn btn-primary"
           >
             Get Started
-          </Link>
+          </button>
         </div>
       </div>
     </header>
