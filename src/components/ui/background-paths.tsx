@@ -57,6 +57,7 @@ export function BackgroundPaths({
     title?: string;
 }) {
     const words = title.split(" ");
+    const navigate = useNavigate();
 
     return (
         <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-background">
@@ -117,6 +118,7 @@ export function BackgroundPaths({
                     >
                         <Link to="/#contact">
                             <Button
+                                onClick={() => handleNavigation('/#contact')}
                                 className="rounded-2xl px-8 py-6 text-lg font-semibold 
                                 bg-primary hover:bg-primary/90 text-white transition-all duration-300 
                                 hover:-translate-y-0.5 border border-primary/20"
