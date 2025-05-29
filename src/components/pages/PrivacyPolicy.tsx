@@ -90,8 +90,8 @@ const PrivacyPolicy = () => {
             <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
             <p>
               If you have questions about this Privacy Policy, please contact us at{' '}
-              <a href="mailto:hello@genesislaunch.com" className="text-primary hover:underline">
-                hello@genesislaunch.com
+              <a href="mailto:info@genesislaunch.com" className="text-primary hover:underline">
+                info@genesislaunch.com
               </a>
             </p>
           </section>
