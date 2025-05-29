@@ -59,6 +59,18 @@ export function BackgroundPaths({
     const words = title.split(" ");
     const navigate = useNavigate();
 
+    const handleNavigation = (path: string) => {
+    setIsOpen(false);
+    if (path.startsWith('/#')) {
+      const element = document.querySelector(path.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      navigate(path);
+    }
+  };
+
     return (
         <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-background">
             <div className="absolute inset-0">
