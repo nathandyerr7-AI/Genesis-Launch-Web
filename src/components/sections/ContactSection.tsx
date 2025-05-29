@@ -34,9 +34,7 @@ const ContactSection = () => {
       });
 
       if (!response.ok) throw new Error('Network response was not ok');
-    }
-    
-    // Simulate form submission
+      
       setStatus('success');
       setFormData({
         name: '',
@@ -45,10 +43,10 @@ const ContactSection = () => {
       });
       
       setTimeout(() => setStatus('idle'), 3000);
-  } catch (error) {
-    console.error('Webhook error:', error);
-    setStatus('error');
-  }
+    } catch (error) {
+      console.error('Webhook error:', error);
+      setStatus('error');
+    }
   };
 
   const contactInfo = [
