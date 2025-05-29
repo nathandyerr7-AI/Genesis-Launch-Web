@@ -13,8 +13,10 @@ const Navbar = () => {
 
   const handleNavigation = (path: string) => {
     setIsOpen(false);
-    if (path.startsWith('/#')) {
-      const element = document.querySelector(path.substring(1));
+    if (path === '/#') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (path.startsWith('/#')) {
+      const element = document.querySelector(path.substring(2));
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
