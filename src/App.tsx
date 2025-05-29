@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
-import { LampDemo } from './components/ui/lamp';
+import { BackgroundPaths } from './components/ui/background-paths';
 import AboutSection from './components/sections/AboutSection';
 import ServicesSection from './components/sections/ServicesSection';
 import TechnologiesSection from './components/sections/TechnologiesSection';
@@ -16,7 +16,9 @@ import CookieConsent from './components/widgets/CookieConsent';
 function HomePage() {
   return (
     <>
-      <LampDemo />
+      <BackgroundPaths 
+        title="Practical AI Solutions That Solve Real Business Problems"
+      />
       <ServicesSection />
       <TechnologiesSection />
       <AboutSection />
