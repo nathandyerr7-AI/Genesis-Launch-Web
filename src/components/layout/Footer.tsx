@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, Zap } from 'lucide-react';
 
 const Footer = () => {
@@ -74,9 +75,9 @@ const Footer = () => {
           </p>
           <div className="mt-4 md:mt-0">
             <ul className="flex space-x-6 text-sm">
-              <li><a href="#" className="text-text-secondary hover:text-primary transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="text-text-secondary hover:text-primary transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="text-text-secondary hover:text-primary transition-colors">Cookie Policy</a></li>
+              <li><Link to="/privacy-policy" className="text-text-secondary hover:text-primary transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/terms-of-service" className="text-text-secondary hover:text-primary transition-colors">Terms of Service</Link></li>
+              <li><Link to="/cookies-policy" className="text-text-secondary hover:text-primary transition-colors">Cookie Policy</Link></li>
             </ul>
           </div>
         </div>
