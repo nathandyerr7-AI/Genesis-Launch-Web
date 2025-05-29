@@ -23,9 +23,20 @@ const ContactSection = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('submitting');
+
+    try {
+      const response = await fetch("https://hook.us2.make.com/g1hdwy9bvlphehtmp52mwuuds7yr4n7m", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (!response.ok) throw new Error('Network response was not ok');
+    }
     
     // Simulate form submission
-    setTimeout(() => {
       setStatus('success');
       setFormData({
         name: '',
@@ -34,7 +45,10 @@ const ContactSection = () => {
       });
       
       setTimeout(() => setStatus('idle'), 3000);
-    }, 1000);
+  } catch (error) {
+    console.error('Webhook error:', error);
+    setStatus('error');
+  }
   };
 
   const contactInfo = [
