@@ -53,8 +53,8 @@ const ContactSection = () => {
     {
       icon: <Mail className="h-6 w-6 text-primary" />,
       title: "Email",
-      content: "hello@genesislaunch.com",
-      link: "mailto:hello@genesislaunch.ai"
+      content: "info@genesislaunch.com",
+      link: "mailto:info@genesislaunch.com"
     },
     {
       icon: <Phone className="h-6 w-6 text-primary" />,
@@ -73,7 +73,7 @@ const ContactSection = () => {
 
       <div className="container relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }}H
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5 }}
           className="text-center max-w-3xl mx-auto mb-16"
