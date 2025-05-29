@@ -14,7 +14,7 @@ const Navbar = () => {
   const handleNavigation = (path: string) => {
     setIsOpen(false);
     if (path.startsWith('/#')) {
-      const element = document.querySelector(path.substring(1));
+      const element = document.querySelector(path.substring(2));
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
@@ -40,7 +40,7 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '/#' },
+    { name: 'Home', href: '/' },
     { name: 'Services', href: '/#services' },
     { name: 'Technologies', href: '/#technologies' },
     { name: 'About', href: '/#about' },
