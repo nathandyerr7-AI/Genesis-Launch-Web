@@ -191,7 +191,7 @@ export function BackgroundPaths({
 
                         <Button
                             onClick={handleCallToggle}
-                            className={`rounded-1xl px-20 py-8 text-lg font-semibold 
+                            className={`rounded-3xl px-20 py-8 text-lg font-semibold 
                             transition-all duration-300 hover:-translate-y-0.5 border
                             flex items-center gap-2 ${
                                 isCallActive 
