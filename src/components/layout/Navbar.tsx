@@ -100,7 +100,6 @@ const Navbar = () => {
               className="block w-full text-left px-3 py-2 text-base font-medium text-text-secondary hover:text-primary transition-colors"
             >
               {link.name}
-            </button>
           ))}
           <button 
             onClick={() => handleNavigation('/#contact')}
