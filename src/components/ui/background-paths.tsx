@@ -184,13 +184,14 @@ export function BackgroundPaths({
                                 </span>
                                 <span className="ml-3 opacity-70 group-hover:opacity-100 group-hover:translate-x-1.5 
                                     transition-all duration-300">
+                                    →
                                 </span>
                             </Button>
                         </Link> */}
 
                         <Button
                             onClick={handleCallToggle}
-                            className={`rounded-3xl px-8 py-6 text-lg font-semibold 
+                            className={`rounded-2xl px-12 py-6 text-lg font-semibold 
                             transition-all duration-300 hover:-translate-y-0.5 border
                             flex items-center gap-2 ${
                                 isCallActive 
