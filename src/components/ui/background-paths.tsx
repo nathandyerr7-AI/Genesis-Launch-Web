@@ -1,9 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link, useNavigate } from "react-router-dom";
+import { Phone } from "lucide-react";
+import Vapi from "@vapi-ai/web";
 
 function FloatingPaths({ position }: { position: number }) {
     const paths = Array.from({ length: 36 }, (_, i) => ({
@@ -60,18 +62,57 @@ export function BackgroundPaths({
     const words = title.split(" ");
     const navigate = useNavigate();
     const [isOpen, setIsOpen] = useState(false);
+    const [isCallActive, setIsCallActive] = useState(false);
+    const [vapi, setVapi] = useState<any>(null);
+
+    useEffect(() => {
+        const vapiInstance = new Vapi("2d03fd0f-aa52-46b3-a62f-c6b550bc29f9");
+        
+        vapiInstance.on("call-start", () => {
+            setIsCallActive(true);
+        });
+
+        vapiInstance.on("call-end", () => {
+            setIsCallActive(false);
+        });
+
+        vapiInstance.on("error", (error) => {
+            console.error("Vapi error:", error);
+            setIsCallActive(false);
+        });
+
+        setVapi(vapiInstance);
+
+        return () => {
+            if (vapiInstance) {
+                vapiInstance.stop();
+            }
+        };
+    }, []);
 
     const handleNavigation = (path: string) => {
-    setIsOpen(false);
-    if (path.startsWith('/#')) {
-      const element = document.querySelector(path.substring(1));
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    } else {
-      navigate(path);
-    }
-  };
+        setIsOpen(false);
+        if (path.startsWith('/#')) {
+            const element = document.querySelector(path.substring(1));
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        } else {
+            navigate(path);
+        }
+    };
+
+    const handleCallToggle = async () => {
+        if (isCallActive) {
+            vapi.stop();
+        } else {
+            try {
+                await vapi.start("032370b4-37a9-4dde-a7f8-29532f603df5");
+            } catch (error) {
+                console.error("Failed to start call:", error);
+            }
+        }
+    };
 
     return (
         <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-background">
@@ -129,6 +170,7 @@ export function BackgroundPaths({
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.7, duration: 0.8 }}
+                        className="flex items-center justify-center gap-4"
                     >
                         <Link to="/#contact">
                             <Button
@@ -146,6 +188,22 @@ export function BackgroundPaths({
                                 </span>
                             </Button>
                         </Link>
+
+                        <Button
+                            onClick={handleCallToggle}
+                            className={`rounded-2xl px-8 py-6 text-lg font-semibold 
+                            transition-all duration-300 hover:-translate-y-0.5 border
+                            flex items-center gap-2 ${
+                                isCallActive 
+                                ? "bg-red-500 hover:bg-red-600 text-white border-red-400/20" 
+                                : "bg-accent hover:bg-accent/90 text-white border-accent/20"
+                            }`}
+                        >
+                            <Phone className="w-5 h-5" />
+                            <span className="opacity-90 group-hover:opacity-100 transition-opacity">
+                                {isCallActive ? "End Call" : "Talk to AI"}
+                            </span>
+                        </Button>
                     </motion.div>
                 </motion.div>
             </div>
