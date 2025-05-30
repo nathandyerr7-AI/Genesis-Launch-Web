@@ -172,22 +172,6 @@ export function BackgroundPaths({
                         transition={{ delay: 0.7, duration: 0.8 }}
                         className="flex items-center justify-center gap-4"
                     >
-                        <Link to="/#contact">
-                            <Button
-                                onClick={() => handleNavigation('/#contact')}
-                                className="rounded-2xl px-8 py-6 text-lg font-semibold 
-                                bg-primary hover:bg-primary/90 text-white transition-all duration-300 
-                                hover:-translate-y-0.5 border border-primary/20"
-                            >
-                                <span className="opacity-90 group-hover:opacity-100 transition-opacity">
-                                    Get Started
-                                </span>
-                                <span className="ml-3 opacity-70 group-hover:opacity-100 group-hover:translate-x-1.5 
-                                    transition-all duration-300">
-                                    →
-                                </span>
-                            </Button>
-                        </Link>
 
                         <Button
                             onClick={handleCallToggle}
