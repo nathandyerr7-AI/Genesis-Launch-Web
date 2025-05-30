@@ -1,6 +1,4 @@
-"use client";
-
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link, useNavigate } from "react-router-dom";
@@ -172,38 +170,32 @@ export function BackgroundPaths({
                         transition={{ delay: 0.7, duration: 0.8 }}
                         className="flex items-center justify-center gap-4"
                     >
-                        {/* <Link to="/#contact">
-                            <Button
-                                onClick={() => handleNavigation('/#contact')}
-                                className="rounded-2xl px-8 py-6 text-lg font-semibold 
-                                bg-primary hover:bg-primary/90 text-white transition-all duration-300 
-                                hover:-translate-y-0.5 border border-primary/20"
-                            >
-                                <span className="opacity-90 group-hover:opacity-100 transition-opacity">
-                                    Get Started
-                                </span>
-                                <span className="ml-3 opacity-70 group-hover:opacity-100 group-hover:translate-x-1.5 
-                                    transition-all duration-300">
-                                    →
-                                </span>
-                            </Button>
-                        </Link> */}
-
-                        <Button
+                        <motion.button
                             onClick={handleCallToggle}
-                            className={`rounded-3xl px-20 py-8 text-lg font-semibold 
-                            transition-all duration-300 hover:-translate-y-0.5 border
-                            flex items-center gap-2 ${
-                                isCallActive 
-                                ? "bg-red-500 hover:bg-red-600 text-white border-red-400/20" 
-                                : "bg-primary hover:bg-accent/90 text-white border-accent/20"
-                            }`}
+                            className={`group relative overflow-hidden rounded-full px-8 py-4 
+                            transition-all duration-300 transform hover:scale-105 
+                            ${isCallActive 
+                                ? "bg-gradient-to-r from-red-600 to-red-400" 
+                                : "bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_200%]"
+                            } shadow-[0_0_20px_rgba(0,112,243,0.5)]`}
+                            whileHover={{
+                                backgroundPosition: ["0% 0%", "100% 100%"],
+                            }}
+                            transition={{
+                                duration: 3,
+                                repeat: Infinity,
+                                repeatType: "reverse",
+                            }}
                         >
-                            <Phone className="w-5 h-5" />
-                            <span className="opacity-90 group-hover:opacity-100 transition-opacity text-xl">
-                                {isCallActive ? "End Call" : "Talk to AI"}
-                            </span>
-                        </Button>
+                            <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+                            <div className="relative flex items-center gap-3">
+                                <Phone className={`w-5 h-5 ${isCallActive ? "animate-pulse" : "animate-bounce"}`} />
+                                <span className="text-xl font-semibold text-white">
+                                    {isCallActive ? "End Call" : "Talk to AI"}
+                                </span>
+                            </div>
+                            <div className="absolute -inset-1 opacity-30 bg-gradient-to-r from-primary via-accent to-primary blur group-hover:opacity-50 transition-opacity duration-300" />
+                        </motion.button>
                     </motion.div>
                 </motion.div>
             </div>
