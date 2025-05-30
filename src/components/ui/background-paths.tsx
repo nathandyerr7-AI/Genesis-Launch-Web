@@ -66,7 +66,7 @@ export function BackgroundPaths({
     const [vapi, setVapi] = useState<any>(null);
 
     useEffect(() => {
-        const vapiInstance = new Vapi("2d03fd0f-aa52-46b3-a62f-c6b550bc29f9");
+        const vapiInstance = new Vapi(import.meta.env.VITE_VAPI_PUBLIC_KEY);
         
         vapiInstance.on("call-start", () => {
             setIsCallActive(true);
@@ -107,7 +107,7 @@ export function BackgroundPaths({
             vapi.stop();
         } else {
             try {
-                await vapi.start("032370b4-37a9-4dde-a7f8-29532f603df5");
+                await vapi.start(import.meta.env.VITE_VAPI_ASSISTANT_ID);
             } catch (error) {
                 console.error("Failed to start call:", error);
             }
