@@ -200,7 +200,7 @@ export function BackgroundPaths({
                             }`}
                         >
                             <Phone className="w-5 h-5" />
-                            <span className="opacity-90 group-hover:opacity-100 transition-opacity">
+                            <span className="opacity-90 group-hover:opacity-100 transition-opacity text-xl">
                                 {isCallActive ? "End Call" : "Talk to AI"}
                             </span>
                         </Button>
