@@ -104,7 +104,7 @@ const Navbar = () => {
           ))}
           <button 
             onClick={() => handleNavigation('/#contact')}
-            className="block w-full px-3 py-2 mt-4 text-center btn btn-primary"
+            className="w-full px-3 py-2 mt-4 text-center btn btn-primary"
           >
             Get Started
           </button>
