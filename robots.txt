@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://scintillating-dolphin-09954e.netlify.app/sitemap.xml
