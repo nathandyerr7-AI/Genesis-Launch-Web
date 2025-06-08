@@ -84,7 +84,7 @@ const TestimonialsSection = () => {
                 {/* Content Side */}
                 <div className="p-6 flex flex-col justify-center">
                   <div className="mb-4">
-                    <Quote className="h-8 w-8 text-primary mb-4" />
+                    
                     <h3 className="text-2xl font-bold mb-2">{testimonial.project}</h3>
                     <div className="flex items-center space-x-2 mb-4">
                       <span className="text-primary font-semibold">{testimonial.client}</span>
