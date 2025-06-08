@@ -11,7 +11,7 @@ const TestimonialsSection = () => {
 
   const testimonials = [
     {
-      client: "Ilias & Sens",
+      client: "Ilias and Sons",
       industry: "E-Commerce",
       project: "Customer Service Chat Agent",
       description: "We designed a comprehensive e-commerce chat agent that provides customers with 24/7 support, intelligent product recommendations, and real-time order tracking capabilities. The solution streamlines customer service operations and enhances the shopping experience.",
