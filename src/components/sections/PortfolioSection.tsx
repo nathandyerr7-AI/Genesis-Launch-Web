@@ -8,11 +8,6 @@ interface CaseStudy {
   category: string;
   description: string;
   image: string;
-  // technologies: string[];
-  // results: {
-  //   metric: string;
-  //   value: string;
-  // }[];
 }
 
 const PortfolioSection = () => {
