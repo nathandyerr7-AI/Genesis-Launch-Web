@@ -15,7 +15,7 @@ const TestimonialsSection = () => {
       industry: "E-Commerce",
       project: "Customer Service Chat Agent",
       description: "We designed a comprehensive e-commerce chat agent that provides customers with 24/7 support, intelligent product recommendations, and real-time order tracking capabilities. The solution streamlines customer service operations and enhances the shopping experience.",
-      image: "C:\Users\natha\OneDrive\Desktop\Genesis Launch\ChatGPT Image Jun 8, 2025, 04_22_52 PM.png",
+      image: "/images/AI Chat Agent Image.png",
       category: "Chat Agents",
       features: [
         "24/7 Customer Support",
