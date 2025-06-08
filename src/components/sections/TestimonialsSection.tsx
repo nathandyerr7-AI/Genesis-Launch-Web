@@ -15,7 +15,7 @@ const TestimonialsSection = () => {
       industry: "E-Commerce",
       project: "Customer Service Chat Agent",
       description: "We designed a comprehensive e-commerce chat agent that provides customers with 24/7 support, intelligent product recommendations, and real-time order tracking capabilities. The solution streamlines customer service operations and enhances the shopping experience.",
-      image: "https://tse4.mm.bing.net/th/id/OIP.WNLIiHACIhTKfS-45xionAHaHa?w=474&h=474&c=7",
+      image: "https://sdmntprwestus2.oaiusercontent.com/files/00000000-4920-61f8-900c-b303d2677ccb/raw?se=2025-06-08T20%3A03%3A23Z&sp=r&sv=2024-08-04&sr=b&scid=3aa68df0-e327-5866-9ec9-87f1a310b877&skoid=1e6af1bf-6b08-4a04-8919-15773e7e7024&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-06-08T10%3A58%3A16Z&ske=2025-06-09T10%3A58%3A16Z&sks=b&skv=2024-08-04&sig=/Z1wkwODpRP6YkHHRzq51TQ%2Bs4%2BNPpaAtz8vqCqVAjw%3D",
       category: "Chat Agents",
       features: [
         "24/7 Customer Support",
