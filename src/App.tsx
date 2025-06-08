@@ -20,7 +20,7 @@ function HomePage() {
       <BackgroundPaths title="Practical AI Solutions That Solve Real Business Problems" />
       <ServicesSection />
       <TechnologiesSection />
-      
+      <PortfolioSection />
       <AboutSection />
       <ContactSection />
     </>
