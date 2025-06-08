@@ -12,7 +12,7 @@ import CookiesPolicy from './components/pages/CookiesPolicy';
 import PrivacyPolicy from './components/pages/PrivacyPolicy';
 import TermsOfService from './components/pages/TermsOfService';
 import CookieConsent from './components/widgets/CookieConsent';
-import PortfolioSection from './components/pages/PortfolioSection';
+import PortfolioSection from './components/sections/PortfolioSection';
 
 function HomePage() {
   return (
