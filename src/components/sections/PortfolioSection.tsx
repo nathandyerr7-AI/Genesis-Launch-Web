@@ -123,28 +123,7 @@ const PortfolioSection = () => {
                         <h3 className="text-2xl font-bold mb-4">{study.title}</h3>
                         <p className="text-text-secondary mb-6">{study.description}</p>
                         
-                        <div className="mb-6">
-                          <h4 className="text-sm font-semibold uppercase tracking-wider text-text-secondary mb-3">Technologies</h4>
-                          <div className="flex flex-wrap gap-2">
-                            {study.technologies.map((tech, i) => (
-                              <span key={i} className="px-3 py-1 text-xs bg-primary/10 text-primary rounded-full">
-                                {tech}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                        
-                        <div className="mb-6 flex-grow">
-                          <h4 className="text-sm font-semibold uppercase tracking-wider text-text-secondary mb-3">Results</h4>
-                          <div className="grid grid-cols-3 gap-4">
-                            {study.results.map((result, i) => (
-                              <div key={i} className="text-center p-3 rounded-lg bg-background/50">
-                                <p className="text-sm text-text-secondary mb-1">{result.metric}</p>
-                                <p className="text-xl font-bold text-primary">{result.value}</p>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
+
                         
                         <div className="mt-auto">
                           <a href="#contact" className="inline-flex items-center text-primary hover:underline">
