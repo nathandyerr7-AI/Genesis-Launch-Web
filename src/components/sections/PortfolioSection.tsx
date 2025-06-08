@@ -58,6 +58,12 @@ const PortfolioSection = () => {
         { metric: "Accuracy", value: "↑ 37%" },
         { metric: "Staff Efficiency", value: "↑ 52%" }
       ]
+    },
+    {
+      title: "E-Commerce Customer Service Chat Agent",
+      category: "Chat Agents",
+      description: "Designed an e-commerce chat agent that users to 24/7 support, product recommendations, and the ability to track their order.",
+      image: "https://images.pexels.com/photos/4481259/pexels-photo-4481259.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     }
   ];
 
