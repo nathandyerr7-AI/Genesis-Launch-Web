@@ -88,7 +88,7 @@ const PortfolioSection = () => {
                         <div className="mb-6">
                           <h4 className="text-sm font-semibold text-text-secondary mb-2">Technologies Used:</h4>
                           <div className="flex flex-wrap gap-2">
-                            {study.technologies.map((tech, techIndex) => (
+                            {(study.technologies || []).map((tech, techIndex) => (
                               <span 
                                 key={techIndex}
                                 className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full"
