@@ -7,12 +7,12 @@ import AboutSection from './components/sections/AboutSection';
 import ServicesSection from './components/sections/ServicesSection';
 import TechnologiesSection from './components/sections/TechnologiesSection';
 import ContactSection from './components/sections/ContactSection';
+import TestimonialsSection from './components/sections/TestimonialsSection';
 import ChatWidget from './components/widgets/ChatWidget';
 import CookiesPolicy from './components/pages/CookiesPolicy';
 import PrivacyPolicy from './components/pages/PrivacyPolicy';
 import TermsOfService from './components/pages/TermsOfService';
 import CookieConsent from './components/widgets/CookieConsent';
-import PortfolioSection from './components/sections/PortfolioSection';
 
 function HomePage() {
   return (
@@ -20,6 +20,7 @@ function HomePage() {
       <BackgroundPaths title="Practical AI Solutions That Solve Real Business Problems" />
       <ServicesSection />
       <TechnologiesSection />
+      <TestimonialsSection />
       <AboutSection />
       <ContactSection />
     </>
