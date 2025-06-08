@@ -12,6 +12,7 @@ import CookiesPolicy from './components/pages/CookiesPolicy';
 import PrivacyPolicy from './components/pages/PrivacyPolicy';
 import TermsOfService from './components/pages/TermsOfService';
 import CookieConsent from './components/widgets/CookieConsent';
+import PortfolioSection from './components/pages/PortfolioSection';
 
 function HomePage() {
   return (
@@ -19,6 +20,7 @@ function HomePage() {
       <BackgroundPaths title="Practical AI Solutions That Solve Real Business Problems" />
       <ServicesSection />
       <TechnologiesSection />
+      
       <AboutSection />
       <ContactSection />
     </>
