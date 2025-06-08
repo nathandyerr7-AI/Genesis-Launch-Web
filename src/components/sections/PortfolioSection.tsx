@@ -8,11 +8,11 @@ interface CaseStudy {
   category: string;
   description: string;
   image: string;
-  technologies: string[];
-  results: {
-    metric: string;
-    value: string;
-  }[];
+  // technologies: string[];
+  // results: {
+  //   metric: string;
+  //   value: string;
+  // }[];
 }
 
 const PortfolioSection = () => {
@@ -23,44 +23,44 @@ const PortfolioSection = () => {
   });
 
   const caseStudies: CaseStudy[] = [
+    // {
+    //   title: "AI-Powered Customer Service Platform",
+    //   category: "Chat Agents",
+    //   description: "Developed an intelligent customer service platform that uses natural language processing to handle inquiries, reducing response time and improving customer satisfaction.",
+    //   image: "https://images.pexels.com/photos/7988079/pexels-photo-7988079.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    //   technologies: ["NLP", "Machine Learning", "React", "Node.js"],
+    //   results: [
+    //     { metric: "Response Time", value: "↓ 85%" },
+    //     { metric: "Customer Satisfaction", value: "↑ 42%" },
+    //     { metric: "Support Costs", value: "↓ 35%" }
+    //   ]
+    // },
+    // {
+    //   title: "Predictive Maintenance System",
+    //   category: "AI Automations",
+    //   description: "Created a predictive maintenance system for a manufacturing client that analyzes equipment data to forecast potential failures before they occur.",
+    //   image: "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    //   technologies: ["Time Series Analysis", "IoT", "TensorFlow", "AWS"],
+    //   results: [
+    //     { metric: "Downtime", value: "↓ 73%" },
+    //     { metric: "Maintenance Costs", value: "↓ 48%" },
+    //     { metric: "Equipment Lifespan", value: "↑ 31%" }
+    //   ]
+    // },
+    // {
+    //   title: "Voice-Activated Inventory Management",
+    //   category: "Voice Agents",
+    //   description: "Designed a voice-activated inventory management system that allows warehouse staff to check, update, and manage inventory hands-free.",
+    //   image: "https://images.pexels.com/photos/4481259/pexels-photo-4481259.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    //   technologies: ["Speech Recognition", "NLP", "Mobile App", "Cloud Database"],
+    //   results: [
+    //     { metric: "Processing Speed", value: "↑ 65%" },
+    //     { metric: "Accuracy", value: "↑ 37%" },
+    //     { metric: "Staff Efficiency", value: "↑ 52%" }
+    //   ]
+    // },
     {
-      title: "AI-Powered Customer Service Platform",
-      category: "Chat Agents",
-      description: "Developed an intelligent customer service platform that uses natural language processing to handle inquiries, reducing response time and improving customer satisfaction.",
-      image: "https://images.pexels.com/photos/7988079/pexels-photo-7988079.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      technologies: ["NLP", "Machine Learning", "React", "Node.js"],
-      results: [
-        { metric: "Response Time", value: "↓ 85%" },
-        { metric: "Customer Satisfaction", value: "↑ 42%" },
-        { metric: "Support Costs", value: "↓ 35%" }
-      ]
-    },
-    {
-      title: "Predictive Maintenance System",
-      category: "AI Automations",
-      description: "Created a predictive maintenance system for a manufacturing client that analyzes equipment data to forecast potential failures before they occur.",
-      image: "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      technologies: ["Time Series Analysis", "IoT", "TensorFlow", "AWS"],
-      results: [
-        { metric: "Downtime", value: "↓ 73%" },
-        { metric: "Maintenance Costs", value: "↓ 48%" },
-        { metric: "Equipment Lifespan", value: "↑ 31%" }
-      ]
-    },
-    {
-      title: "Voice-Activated Inventory Management",
-      category: "Voice Agents",
-      description: "Designed a voice-activated inventory management system that allows warehouse staff to check, update, and manage inventory hands-free.",
-      image: "https://images.pexels.com/photos/4481259/pexels-photo-4481259.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      technologies: ["Speech Recognition", "NLP", "Mobile App", "Cloud Database"],
-      results: [
-        { metric: "Processing Speed", value: "↑ 65%" },
-        { metric: "Accuracy", value: "↑ 37%" },
-        { metric: "Staff Efficiency", value: "↑ 52%" }
-      ]
-    },
-    {
-      title: "E-Commerce Customer Service Chat Agent",
+      title: "E-Commerce Customer Service Agent",
       category: "Chat Agents",
       description: "Designed an e-commerce chat agent that users to 24/7 support, product recommendations, and the ability to track their order.",
       image: "https://images.pexels.com/photos/4481259/pexels-photo-4481259.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
