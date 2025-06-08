@@ -8,7 +8,6 @@ interface CaseStudy {
   category: string;
   description: string;
   image: string;
-  technologies: string[];
 }
 
 const PortfolioSection = () => {
@@ -25,7 +24,6 @@ const PortfolioSection = () => {
       category: "Chat Agents",
       description: "Designed an e-commerce chat agent that users to 24/7 support, product recommendations, and the ability to track their order.",
       image: "https://images.pexels.com/photos/4481259/pexels-photo-4481259.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      technologies: ["React", "Node.js", "OpenAI", "MongoDB"]
     }
   ];
 
@@ -84,21 +82,6 @@ const PortfolioSection = () => {
                       <div className="p-6 flex flex-col">
                         <h3 className="text-2xl font-bold mb-4">{study.title}</h3>
                         <p className="text-text-secondary mb-6">{study.description}</p>
-                        
-                        <div className="mb-6">
-                          <h4 className="text-sm font-semibold text-text-secondary mb-2">Technologies Used:</h4>
-                          <div className="flex flex-wrap gap-2">
-                            {(study.technologies || []).map((tech, techIndex) => (
-                              <span 
-                                key={techIndex}
-                                className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full"
-                              >
-                                {tech}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-
                         
                         <div className="mt-auto">
                           <a href="#contact" className="inline-flex items-center text-primary hover:underline">
