@@ -14,7 +14,6 @@ const ChatWidget = () => {
           voice: {
             url: "https://runtime-api.voiceflow.com"
           },
-          
         });
       }
     };
