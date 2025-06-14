@@ -13,6 +13,9 @@ const ChatWidget = () => {
           versionID: 'production',
           voice: {
             url: "https://runtime-api.voiceflow.com"
+          },
+          assistant: {
+            stylesheet: "./index.css"
           }
         });
       }
