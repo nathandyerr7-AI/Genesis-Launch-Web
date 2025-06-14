@@ -61,21 +61,25 @@ export function BackgroundPaths({
     const navigate = useNavigate();
     const [isOpen, setIsOpen] = useState(false);
     const [isCallActive, setIsCallActive] = useState(false);
+    const [isConnecting, setIsConnecting] = useState(false);
     const [vapi, setVapi] = useState<any>(null);
 
     useEffect(() => {
         const vapiInstance = new Vapi(import.meta.env.VITE_VAPI_PUBLIC_KEY);
         
         vapiInstance.on("call-start", () => {
+            setIsConnecting(false);
             setIsCallActive(true);
         });
 
         vapiInstance.on("call-end", () => {
+            setIsConnecting(false);
             setIsCallActive(false);
         });
 
         vapiInstance.on("error", (error) => {
             console.error("Vapi error:", error);
+            setIsConnecting(false);
             setIsCallActive(false);
         });
 
@@ -104,13 +108,43 @@ export function BackgroundPaths({
         if (isCallActive) {
             vapi.stop();
         } else {
+            setIsConnecting(true);
             try {
                 await vapi.start(import.meta.env.VITE_VAPI_ASSISTANT_ID);
             } catch (error) {
                 console.error("Failed to start call:", error);
+                setIsConnecting(false);
             }
         }
     };
+
+    const getButtonState = () => {
+        if (isConnecting) {
+            return {
+                text: "Connecting...",
+                className: "bg-gradient-to-r from-primary/80 via-accent/80 to-primary/80 bg-[length:200%_200%]",
+                icon: (
+                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                )
+            };
+        }
+        
+        if (isCallActive) {
+            return {
+                text: "End Call",
+                className: "bg-gradient-to-r from-red-600 to-red-400",
+                icon: <Phone className="w-5 h-5 animate-pulse" />
+            };
+        }
+        
+        return {
+            text: "Talk to AI",
+            className: "bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_200%]",
+            icon: <Phone className="w-5 h-5 animate-bounce" />
+        };
+    };
+
+    const buttonState = getButtonState();
 
     return (
         <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-background">
@@ -172,26 +206,24 @@ export function BackgroundPaths({
                     >
                         <motion.button
                             onClick={handleCallToggle}
+                            disabled={isConnecting}
                             className={`group relative overflow-hidden rounded-full px-8 py-4 
-                            transition-all duration-300 transform hover:scale-105 
-                            ${isCallActive 
-                                ? "bg-gradient-to-r from-red-600 to-red-400" 
-                                : "bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_200%]"
-                            } shadow-[0_0_20px_rgba(0,112,243,0.5)]`}
-                            whileHover={{
+                            transition-all duration-300 transform hover:scale-105 disabled:cursor-not-allowed
+                            ${buttonState.className} shadow-[0_0_20px_rgba(0,112,243,0.5)]`}
+                            whileHover={!isConnecting ? {
                                 backgroundPosition: ["0% 0%", "100% 100%"],
-                            }}
+                            } : {}}
                             transition={{
                                 duration: 3,
-                                repeat: Infinity,
+                                repeat: isConnecting ? 0 : Infinity,
                                 repeatType: "reverse",
                             }}
                         >
                             <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
                             <div className="relative flex items-center gap-3">
-                                <Phone className={`w-5 h-5 ${isCallActive ? "animate-pulse" : "animate-bounce"}`} />
+                                {buttonState.icon}
                                 <span className="text-xl font-semibold text-white">
-                                    {isCallActive ? "End Call" : "Talk to AI"}
+                                    {buttonState.text}
                                 </span>
                             </div>
                             <div className="absolute -inset-1 opacity-30 bg-gradient-to-r from-primary via-accent to-primary blur group-hover:opacity-50 transition-opacity duration-300" />
