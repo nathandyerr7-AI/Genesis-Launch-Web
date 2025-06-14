@@ -28,20 +28,13 @@ function HomePage() {
 }
 
 function App() {
-  const [showWidget, setShowWidget] = useState(false);
   const [showCookieConsent, setShowCookieConsent] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowWidget(true);
-    }, 3000);
-    
     const hasAcceptedCookies = localStorage.getItem('cookiesAccepted');
     if (!hasAcceptedCookies) {
       setShowCookieConsent(true);
     }
-    
-    return () => clearTimeout(timer);
   }, []);
 
   const handleAcceptCookies = () => {
@@ -66,7 +59,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
-        {showWidget && <ChatWidget />}
+        <ChatWidget />
         {showCookieConsent && (
           <CookieConsent
             onAccept={handleAcceptCookies}

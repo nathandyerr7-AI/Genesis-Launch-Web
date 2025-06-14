@@ -1,46 +1,48 @@
-import React, { useState } from 'react';
-import { MessageCircle, X } from 'lucide-react';
+import React, { useEffect } from 'react';
 
 const ChatWidget = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    // Load Voiceflow chat widget script
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.onload = function() {
+      if (window.voiceflow) {
+        window.voiceflow.chat.load({
+          verify: { projectID: '684dba87fe109ae814e7f0f6' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production',
+          voice: {
+            url: "https://runtime-api.voiceflow.com"
+          }
+        });
+      }
+    };
+    script.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
+    
+    // Append script to document head
+    document.head.appendChild(script);
 
-  return (
-    <div className="fixed bottom-4 right-4 z-50">
-      {isOpen ? (
-        <div className="bg-white rounded-lg shadow-lg p-4 w-80">
-          <div className="flex justify-between items-center mb-4">
-            <h3 className="font-semibold">Chat with us</h3>
-            <button
-              onClick={() => setIsOpen(false)}
-              className="text-gray-500 hover:text-gray-700"
-            >
-              <X size={20} />
-            </button>
-          </div>
-          <div className="h-64 bg-gray-50 rounded p-2 mb-4">
-            <p className="text-gray-500 text-sm">
-              Hi there! How can we help you today?
-            </p>
-          </div>
-          <div className="flex gap-2">
-            <input
-              type="text"
-              placeholder="Type your message..."
-              className="flex-1 px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-            />
-            <button className="btn btn-primary px-4">Send</button>
-          </div>
-        </div>
-      ) : (
-        <button
-          onClick={() => setIsOpen(true)}
-          className="bg-primary text-white p-3 rounded-full shadow-lg hover:bg-primary/90 transition-colors"
-        >
-          <MessageCircle size={24} />
-        </button>
-      )}
-    </div>
-  );
+    // Cleanup function to remove script when component unmounts
+    return () => {
+      if (document.head.contains(script)) {
+        document.head.removeChild(script);
+      }
+    };
+  }, []);
+
+  // Return null since Voiceflow handles its own UI
+  return null;
 };
+
+// Extend Window interface to include voiceflow
+declare global {
+  interface Window {
+    voiceflow: {
+      chat: {
+        load: (config: any) => void;
+      };
+    };
+  }
+}
 
 export default ChatWidget;
