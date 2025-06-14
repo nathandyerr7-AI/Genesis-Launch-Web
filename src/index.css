@@ -153,3 +153,160 @@
   transform: translateY(0);
   transition-delay: 0.6s;
 }
+
+/* Voiceflow Chat Widget Custom Styling */
+@layer utilities {
+  /* Main chat widget container */
+  :global(div[data-voiceflow-chat]) {
+    font-family: 'Inter', sans-serif !important;
+  }
+
+  /* Chat widget backdrop/overlay */
+  :global(.vfrc-widget--chat) {
+    background: var(--background) !important;
+    border: 1px solid rgba(0, 112, 243, 0.3) !important;
+    box-shadow: 0 0 20px rgba(0, 112, 243, 0.15) !important;
+  }
+
+  /* Chat header */
+  :global(.vfrc-header) {
+    background: linear-gradient(135deg, var(--primary), var(--accent)) !important;
+    border-bottom: 1px solid rgba(0, 112, 243, 0.3) !important;
+  }
+
+  /* Chat messages container */
+  :global(.vfrc-chat) {
+    background: var(--background) !important;
+  }
+
+  /* User messages */
+  :global(.vfrc-message--user) {
+    background: linear-gradient(135deg, var(--primary), var(--accent)) !important;
+    color: white !important;
+    border-radius: 12px !important;
+  }
+
+  /* Bot messages */
+  :global(.vfrc-message--system) {
+    background: var(--background-light) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid rgba(124, 58, 237, 0.2) !important;
+    border-radius: 12px !important;
+  }
+
+  /* Input area */
+  :global(.vfrc-input) {
+    background: var(--background-light) !important;
+    border: 1px solid rgba(0, 112, 243, 0.3) !important;
+    color: var(--text-primary) !important;
+  }
+
+  :global(.vfrc-input:focus) {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.2) !important;
+  }
+
+  /* Input placeholder */
+  :global(.vfrc-input::placeholder) {
+    color: var(--text-secondary) !important;
+  }
+
+  /* Send button */
+  :global(.vfrc-button--send) {
+    background: linear-gradient(135deg, var(--primary), var(--accent)) !important;
+    color: white !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+  }
+
+  :global(.vfrc-button--send:hover) {
+    filter: brightness(1.1) !important;
+    box-shadow: 0 0 15px rgba(0, 112, 243, 0.5) !important;
+  }
+
+  /* Chat launcher button */
+  :global(.vfrc-launcher) {
+    background: linear-gradient(135deg, var(--primary), var(--accent)) !important;
+    box-shadow: 0 0 20px rgba(0, 112, 243, 0.5) !important;
+    transition: all 0.3s ease !important;
+  }
+
+  :global(.vfrc-launcher:hover) {
+    transform: scale(1.05) !important;
+    box-shadow: 0 0 25px rgba(0, 112, 243, 0.7) !important;
+  }
+
+  /* Scrollbar styling for chat */
+  :global(.vfrc-chat::-webkit-scrollbar) {
+    width: 6px !important;
+  }
+
+  :global(.vfrc-chat::-webkit-scrollbar-track) {
+    background: var(--background-light) !important;
+  }
+
+  :global(.vfrc-chat::-webkit-scrollbar-thumb) {
+    background: var(--primary) !important;
+    border-radius: 3px !important;
+  }
+
+  :global(.vfrc-chat::-webkit-scrollbar-thumb:hover) {
+    background: var(--accent) !important;
+  }
+
+  /* Typography improvements */
+  :global(.vfrc-message) {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Animation for new messages */
+  :global(.vfrc-message) {
+    animation: fadeInUp 0.3s ease-out !important;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Close button styling */
+  :global(.vfrc-close) {
+    color: white !important;
+    opacity: 0.8 !important;
+    transition: opacity 0.3s ease !important;
+  }
+
+  :global(.vfrc-close:hover) {
+    opacity: 1 !important;
+  }
+
+  /* Additional UI elements */
+  :global(.vfrc-avatar) {
+    border: 2px solid var(--primary) !important;
+  }
+
+  :global(.vfrc-typing) {
+    color: var(--text-secondary) !important;
+  }
+
+  /* Quick replies */
+  :global(.vfrc-quick-reply) {
+    background: var(--background-light) !important;
+    border: 1px solid rgba(0, 112, 243, 0.3) !important;
+    color: var(--text-primary) !important;
+    transition: all 0.3s ease !important;
+  }
+
+  :global(.vfrc-quick-reply:hover) {
+    background: var(--primary) !important;
+    color: white !important;
+    transform: translateY(-1px) !important;
+  }
+}
