@@ -1,8 +1,16 @@
 .vfrc-chat,
 .vfrc-chat--dialog {        /* main panel */
-  background-color: rgb(20, 19, 38) !important;   /* <— pick any colour */
+  background-color: rgb(20, 19, 38) !important;
 }
 
 .vfrc-assistant-info--title {
   color: #ffffff !important;
 }
+
+.vfrc-assistant-info--description {
+  color: #ffffff !important;
+}
+
+ .vf-footer {
+   background-color: rgb(20, 19, 38) !important; 
+ }
