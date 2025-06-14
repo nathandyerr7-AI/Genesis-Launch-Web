@@ -1,0 +1,4 @@
+.vfrc-chat,
+.vfrc-chat--dialog {        /* main panel */
+  background-color: #000000 !important;   /* <— pick any colour */
+}
