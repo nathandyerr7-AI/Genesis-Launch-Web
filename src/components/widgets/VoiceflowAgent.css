@@ -1,16 +1,8 @@
-/* Voiceflow Widget Custom Styling - Aligned with Site Theme */
-/* Main chat panel */
-.vfrc-chat,
-.vfrc-chat--dialog {
-  background-color: #0a0a14 !important; /* --background */
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  border-radius: 16px !important;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5) !important;
-}
+/* Voiceflow Widget Custom Styling - Only targeting chat widget elements */
 
 /* Widget launcher button */
 .vfrc-widget--launcher {
-  background: linear-gradient(135deg, #0070f3, #7c3aed) !important; /* primary to accent */
+  background: linear-gradient(135deg, #0070f3, #7c3aed) !important;
   box-shadow: 0 0 20px rgba(0, 112, 243, 0.5) !important;
   border: none !important;
   transition: all 0.3s ease !important;
@@ -25,6 +17,25 @@
   color: white !important;
 }
 
+/* Widget container */
+.vfrc-widget {
+  font-family: 'Inter', sans-serif !important;
+  border-radius: 16px !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background: #0a0a14 !important;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* Main chat panel */
+.vfrc-chat,
+.vfrc-chat--dialog {
+  background-color: #0a0a14 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5) !important;
+}
+
 /* Header styling */
 .vfrc-header {
   background: linear-gradient(135deg, #0070f3, #7c3aed) !important;
@@ -34,7 +45,7 @@
 
 .vfrc-assistant-info--title,
 .vfrc-header--title {
-  color: #ffffff !important; /* --text-primary */
+  color: #ffffff !important;
   font-weight: 600 !important;
 }
 
@@ -54,29 +65,29 @@
 
 .vfrc-message--system .vfrc-message--bubble,
 .vfrc-message--assistant .vfrc-message--bubble {
-  background: #141428 !important; /* --background-light */
-  color: #a0aec0 !important; /* --text-secondary */
+  background: #141428 !important;
+  color: #a0aec0 !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   border-radius: 18px 18px 18px 4px !important;
 }
 
 /* Input field */
 .vfrc-input {
-  background-color: #141428 !important; /* --background-light */
+  background-color: #141428 !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   border-radius: 12px !important;
-  color: #ffffff !important; /* --text-primary */
+  color: #ffffff !important;
   font-family: 'Inter', sans-serif !important;
 }
 
 .vfrc-input:focus {
-  border-color: #0070f3 !important; /* --primary */
+  border-color: #0070f3 !important;
   box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.2) !important;
   outline: none !important;
 }
 
 .vfrc-input::placeholder {
-  color: #a0aec0 !important; /* --text-secondary */
+  color: #a0aec0 !important;
 }
 
 /* Buttons */
@@ -99,20 +110,20 @@
 .vfrc-button--secondary {
   background: transparent !important;
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
-  color: #a0aec0 !important; /* --text-secondary */
+  color: #a0aec0 !important;
   border-radius: 8px !important;
   transition: all 0.3s ease !important;
 }
 
 .vfrc-button--secondary:hover {
-  border-color: #0070f3 !important; /* --primary */
+  border-color: #0070f3 !important;
   color: #0070f3 !important;
   background: rgba(0, 112, 243, 0.1) !important;
 }
 
 /* Footer */
 .vfrc-footer {
-  background: #141428 !important; /* --background-light */
+  background: #141428 !important;
   border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
   border-radius: 0 0 16px 16px !important;
 }
@@ -126,19 +137,19 @@
 
 /* Timestamp */
 .vfrc-timestamp {
-  color: #a0aec0 !important; /* --text-secondary */
+  color: #a0aec0 !important;
   font-size: 11px !important;
 }
 
 /* Typing indicator */
 .vfrc-typing-indicator {
-  background: #141428 !important; /* --background-light */
+  background: #141428 !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   border-radius: 18px !important;
 }
 
 .vfrc-typing-indicator--dot {
-  background: #0070f3 !important; /* --primary */
+  background: #0070f3 !important;
 }
 
 /* Close/minimize buttons */
@@ -155,7 +166,7 @@
   border-radius: 4px !important;
 }
 
-/* Scrollbar styling */
+/* Scrollbar styling - only for Voiceflow chat */
 .vfrc-chat::-webkit-scrollbar {
   width: 6px !important;
 }
@@ -166,7 +177,7 @@
 }
 
 .vfrc-chat::-webkit-scrollbar-thumb {
-  background: rgba(0, 112, 243, 0.5) !important; /* --primary with opacity */
+  background: rgba(0, 112, 243, 0.5) !important;
   border-radius: 3px !important;
 }
 
@@ -178,7 +189,7 @@
 .vfrc-quick-reply {
   background: transparent !important;
   border: 1px solid rgba(0, 112, 243, 0.5) !important;
-  color: #0070f3 !important; /* --primary */
+  color: #0070f3 !important;
   border-radius: 20px !important;
   transition: all 0.3s ease !important;
   font-weight: 500 !important;
@@ -191,24 +202,24 @@
   box-shadow: 0 2px 8px rgba(0, 112, 243, 0.2) !important;
 }
 
-/* Loading states */
+/* Loading states - only for Voiceflow elements */
 .vfrc-loading {
   background: linear-gradient(90deg, #141428, #1a1a2e, #141428) !important;
   background-size: 200% 100% !important;
-  animation: loading 1.5s infinite !important;
+  animation: vfrc-loading 1.5s infinite !important;
 }
 
-@keyframes loading {
+@keyframes vfrc-loading {
   0% { background-position: 200% 0; }
   100% { background-position: -200% 0; }
 }
 
-/* Message animation */
+/* Message animation - only for Voiceflow messages */
 .vfrc-message {
-  animation: slideInUp 0.3s ease-out !important;
+  animation: vfrc-slideInUp 0.3s ease-out !important;
 }
 
-@keyframes slideInUp {
+@keyframes vfrc-slideInUp {
   from {
     opacity: 0;
     transform: translateY(10px);
@@ -219,25 +230,15 @@
   }
 }
 
-/* Widget container */
-.vfrc-widget {
-  font-family: 'Inter', sans-serif !important;
-  border-radius: 16px !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  background: #0a0a14 !important; /* --background */
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5) !important;
-  backdrop-filter: blur(10px) !important;
-}
-
 /* Powered by Voiceflow text */
 .vfrc-footer--powered-by {
-  color: #a0aec0 !important; /* --text-secondary */
+  color: #a0aec0 !important;
   font-size: 10px !important;
   opacity: 0.7 !important;
 }
 
 .vfrc-footer--powered-by a {
-  color: #0070f3 !important; /* --primary */
+  color: #0070f3 !important;
   text-decoration: none !important;
 }
 
@@ -245,9 +246,9 @@
   text-decoration: underline !important;
 }
 
-/* Card elements */
+/* Card elements - only Voiceflow cards */
 .vfrc-card {
-  background: #141428 !important; /* --background-light */
+  background: #141428 !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   border-radius: 12px !important;
   transition: all 0.3s ease !important;
@@ -258,24 +259,24 @@
   box-shadow: 0 0 20px rgba(0, 112, 243, 0.15) !important;
 }
 
-/* Text elements */
+/* Text elements - only Voiceflow text */
 .vfrc-text {
-  color: #a0aec0 !important; /* --text-secondary */
+  color: #a0aec0 !important;
   line-height: 1.5 !important;
 }
 
 .vfrc-text--primary {
-  color: #ffffff !important; /* --text-primary */
+  color: #ffffff !important;
 }
 
-/* Links */
+/* Links - only Voiceflow links */
 .vfrc-link {
-  color: #0070f3 !important; /* --primary */
+  color: #0070f3 !important;
   text-decoration: none !important;
   transition: color 0.3s ease !important;
 }
 
 .vfrc-link:hover {
-  color: #7c3aed !important; /* --accent */
+  color: #7c3aed !important;
   text-decoration: underline !important;
 }
