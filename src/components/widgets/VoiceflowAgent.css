@@ -8,14 +8,6 @@
   transition: all 0.3s ease !important;
 }
 
-.vfrc-widget--launcher:hover {
-  transform: scale(1.05) !important;
-  box-shadow: 0 0 30px rgba(0, 112, 243, 0.7) !important;
-}
-
-.vfrc-widget--launcher svg {
-  color: white !important;
-}
 
 /* Widget container */
 .vfrc-widget {
