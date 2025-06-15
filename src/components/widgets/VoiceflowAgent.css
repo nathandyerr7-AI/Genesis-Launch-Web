@@ -31,3 +31,9 @@
 .vfrc-header--subtitle {
   color: rgba(255, 255, 255, 0.8) !important;
 }
+
+.vfrc-widget .vfrc-footer {
+  background: #141326 !important;        /* ← pick any colour */
+  border-top: 1px solid rgba(255,255,255,.1) !important;
+  border-radius: 0 0 16px 16px !important;
+}
