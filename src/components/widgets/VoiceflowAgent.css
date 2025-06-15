@@ -72,8 +72,6 @@
   transition: transform .2s ease !important;
 }
 
-.vfrc-widget .vfrc-button--primary:hover,
-.vfrc-widget .vfrc-send-button:hover { transform: translateY(-1px) !important; }
 
 /* Footer */
 .vfrc-widget .vfrc-footer {
