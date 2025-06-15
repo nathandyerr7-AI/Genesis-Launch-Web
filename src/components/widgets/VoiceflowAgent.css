@@ -43,14 +43,6 @@
   border: none !important;
 }
 
-/* Assistant / system bubbles */
-.vfrc-widget .vfrc-message--system .vfrc-message--bubble {
-  background: #141428 !important;
-  color: #a0aec0 !important;
-  border: 1px solid rgba(255,255,255,.1) !important;
-  border-radius: 18px 18px 18px 4px !important;
-}
-
 /* Input */
 .vfrc-widget .vfrc-input {
   background: #141428 !important;
