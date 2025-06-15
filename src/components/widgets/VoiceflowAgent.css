@@ -1,5 +1,5 @@
 /* Voiceflow Widget Custom Styling - Aligned with Site Theme */
-
+:global {
 /* Main chat panel */
 .vfrc-chat,
 .vfrc-chat--dialog {
@@ -279,4 +279,5 @@
 .vfrc-link:hover {
   color: #7c3aed !important; /* --accent */
   text-decoration: underline !important;
+}
 }
