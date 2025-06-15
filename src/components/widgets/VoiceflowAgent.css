@@ -117,29 +117,6 @@
   border-radius: 0 0 16px 16px !important;
 }
 
-/* Avatar */
-.vfrc-avatar {
-  background: linear-gradient(135deg, #0070f3, #7c3aed) !important;
-  border-radius: 50% !important;
-  border: 2px solid rgba(255, 255, 255, 0.1) !important;
-}
-
-/* Timestamp */
-.vfrc-timestamp {
-  color: #a0aec0 !important; /* --text-secondary */
-  font-size: 11px !important;
-}
-
-/* Typing indicator */
-.vfrc-typing-indicator {
-  background: #141428 !important; /* --background-light */
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  border-radius: 18px !important;
-}
-
-.vfrc-typing-indicator--dot {
-  background: #0070f3 !important; /* --primary */
-}
 
 /* Close/minimize buttons */
 .vfrc-close-button,
