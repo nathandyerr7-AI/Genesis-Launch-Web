@@ -3,17 +3,6 @@
 .vfrc-chat,
 .vfrc-chat--dialog {
   background-color: #0a0a14 !important; /* --background */
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  border-radius: 16px !important;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5) !important;
-}
-
-/* Widget launcher button */
-.vfrc-widget--launcher {
-  background: linear-gradient(135deg, #0070f3, #7c3aed) !important; /* primary to accent */
-  box-shadow: 0 0 20px rgba(0, 112, 243, 0.5) !important;
-  border: none !important;
-  transition: all 0.3s ease !important;
 }
 
 .vfrc-widget--launcher:hover {
