@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Zap } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
@@ -57,7 +57,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div onClick={() => handleNavigation('/')} className="flex items-center space-x-2 cursor-pointer">
-            <img></img>
+            <img src="/favicon.svg" alt="Genesis Launch Logo" className="h-6 w-6 text-primary" />
             <span className="text-xl md:text-2xl font-bold text-white">Genesis<span className="text-primary">Launch</span></span>
           </div>
 
