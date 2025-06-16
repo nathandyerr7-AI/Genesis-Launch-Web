@@ -1,9 +1,5 @@
 /* Voiceflow Widget Custom Styling - Aligned with Site Theme */
 /* Main chat panel */
-.vfrc-chat,
-.vfrc-chat--dialog {
-  background-color: #141326 !important; /* --background */
-}
 
 .vfrc-widget--launcher:hover {
   transform: scale(1.05) !important;
@@ -19,21 +15,4 @@
   background: linear-gradient(135deg, #0070f3, #7c3aed) !important;
   border-radius: 16px 16px 0 0 !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-}
-
-.vfrc-assistant-info--title,
-.vfrc-header--title {
-  color: #ffffff !important; /* --text-primary */
-  font-weight: 600 !important;
-}
-
-.vfrc-assistant-info--description,
-.vfrc-header--subtitle {
-  color: rgba(255, 255, 255, 0.8) !important;
-}
-
-.vfrc-widget .vfrc-footer {
-  background: #141326 !important;        /* ← pick any colour */
-  border-top: 1px solid rgba(255,255,255,.1) !important;
-  border-radius: 0 0 16px 16px !important;
 }
