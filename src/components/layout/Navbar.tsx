@@ -56,12 +56,9 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div onClick={() => handleNavigation('/')} className="flex items-center cursor-pointer">
-            <img 
-              src="/logo/GL Logo.svg" 
-              alt="Genesis Launch Logo" 
-              className="h-10 w-auto"
-            />
+          <div onClick={() => handleNavigation('/')} className="flex items-center space-x-2 cursor-pointer">
+            <img src="/logo/Logo.svg" alt="Genesis Launch Logo" />
+            <span className="text-xl md:text-2xl font-bold text-white">Genesis<span className="text-primary">Launch</span></span>
           </div>
 
           {/* Desktop Navigation */}
