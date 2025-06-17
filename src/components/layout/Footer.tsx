@@ -11,7 +11,6 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <img src="/logo/GL Logo.svg" alt="Genesis Launch Logo" className="h-9 w-9 text-primary" />
               <span className="text-xl font-bold text-white">Genesis<span className="text-primary">Launch</span></span>
             </div>
             <p className="text-text-secondary mb-4">
