@@ -77,7 +77,7 @@
 
   /* Enhanced body styles */
   body {
-    @apply bg-background-primary text-text-primary font-sans antialiased min-h-screen;
+    @apply bg-background-primary text-text-primary font-sans antialiased;
     
     /* Sophisticated background texture */
     background-image: 
@@ -87,9 +87,6 @@
     background-attachment: fixed;
     background-size: 100vw 100vh, 100vw 100vh, 100vw 100vh;
     
-    /* Ensure consistent background color */
-    background-color: #0a0b14;
-    
     /* Improved text rendering */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -97,18 +94,6 @@
     
     /* Prevent horizontal scroll */
     overflow-x: hidden;
-  }
-
-  /* Ensure root element also has the same background */
-  html {
-    @apply bg-background-primary;
-    background-color: #0a0b14;
-  }
-
-  /* Ensure the root div also inherits the background */
-  #root {
-    @apply bg-background-primary min-h-screen;
-    background-color: #0a0b14;
   }
 
   /* Enhanced typography hierarchy */

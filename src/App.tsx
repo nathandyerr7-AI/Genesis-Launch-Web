@@ -48,7 +48,7 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen flex flex-col bg-background-primary">
+      <div className="min-h-screen flex flex-col">
         <Navbar />
         <main>
           <Routes>
