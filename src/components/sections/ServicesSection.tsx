@@ -134,17 +134,17 @@ const ServicesSection = () => {
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-surface-secondary/50 border border-surface-tertiary/50 rounded-full mb-6">
-            <div className="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></div>
-            <span className="text-sm font-medium text-text-secondary">Our Expertise</span>
-          </div>
-          
           <h2 className="section-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             <span className="text-gradient-primary">Comprehensive AI</span>
             <br />
             <span className="text-text-primary">Solutions</span>
           </h2>
           
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-surface-secondary/50 border border-surface-tertiary/50 rounded-full mb-6">
+            <div className="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></div>
+            <span className="text-sm font-medium text-text-secondary">Our Expertise</span>
+          </div>
+
           <p className="text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl mx-auto">
             We deliver end-to-end AI solutions designed to transform your business operations, 
             enhance customer experiences, and unlock sustainable growth opportunities.
