@@ -96,11 +96,6 @@
     overflow-x: hidden;
   }
 
-  /* Add royal blue hint to bg-background class */
-  .bg-background {
-    background: linear-gradient(135deg, #0a0b14 0%, #0a0b16 50%, #0b0c18 100%) !important;
-  }
-
   /* Enhanced typography hierarchy */
   h1, h2, h3, h4, h5, h6 {
     @apply font-semibold tracking-tight text-text-primary;
