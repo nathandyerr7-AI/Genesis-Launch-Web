@@ -73,7 +73,7 @@ const ContactSection = () => {
       title: "Call Us",
       content: "+1 (613) 862-1476",
       link: "tel:+16138621476",
-      description: "Daily, 9am-12pm EST"
+      description: "Mon-Sun, 9am-12pm EST"
     },
   ];
 
