@@ -65,8 +65,8 @@ const Footer = () => {
 
       <div className="container relative z-10">
         {/* Main Footer Content */}
-        <div className="py-16 lg:py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+        <div className="py-20 lg:py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20">
             {/* Brand Section */}
             <div className="lg:col-span-4">
               <motion.div
@@ -76,37 +76,37 @@ const Footer = () => {
                 viewport={{ once: true }}
               >
                 {/* Logo */}
-                <div className="flex items-center space-x-2 mb-6">
+                <div className="flex items-center space-x-3 mb-8">
                   <span className="text-2xl font-bold text-text-primary">Genesis</span>
                   <span className="text-2xl font-bold text-primary-500">Launch</span>
                 </div>
 
                 {/* Description */}
-                <p className="text-text-secondary mb-8 leading-relaxed max-w-md">
+                <p className="text-text-secondary mb-10 leading-relaxed max-w-md text-lg">
                   Transforming businesses with practical AI solutions that solve real problems 
                   and drive measurable growth. Your trusted partner in AI innovation.
                 </p>
 
                 {/* Contact Information */}
-                <div className="space-y-4">
+                <div className="space-y-6">
                   {contactInfo.map((item, index) => (
-                    <div key={index} className="flex items-center gap-3">
-                      <div className="flex-shrink-0 w-10 h-10 bg-surface-tertiary/50 rounded-lg flex items-center justify-center text-primary-400">
+                    <div key={index} className="flex items-center gap-4">
+                      <div className="flex-shrink-0 w-12 h-12 bg-surface-tertiary/50 rounded-xl flex items-center justify-center text-primary-400">
                         {item.icon}
                       </div>
                       <div>
-                        <p className="text-xs text-text-tertiary font-medium uppercase tracking-wider">
+                        <p className="text-xs text-text-tertiary font-medium uppercase tracking-wider mb-1">
                           {item.label}
                         </p>
                         {item.href ? (
                           <a 
                             href={item.href}
-                            className="text-text-secondary hover:text-primary-400 transition-colors duration-200"
+                            className="text-text-primary hover:text-primary-400 transition-colors duration-200 font-medium"
                           >
                             {item.value}
                           </a>
                         ) : (
-                          <p className="text-text-secondary">{item.value}</p>
+                          <p className="text-text-primary font-medium">{item.value}</p>
                         )}
                       </div>
                     </div>
@@ -117,7 +117,7 @@ const Footer = () => {
 
             {/* Navigation Sections */}
             <div className="lg:col-span-8">
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 lg:gap-12">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 lg:gap-16">
                 {footerSections.map((section, sectionIndex) => (
                   <motion.div
                     key={section.title}
@@ -126,18 +126,18 @@ const Footer = () => {
                     transition={{ duration: 0.6, delay: sectionIndex * 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <h3 className="text-lg font-semibold text-text-primary mb-6">
+                    <h3 className="text-xl font-semibold text-text-primary mb-8">
                       {section.title}
                     </h3>
-                    <ul className="space-y-4">
+                    <ul className="space-y-5">
                       {section.links.map((link, linkIndex) => (
                         <li key={linkIndex}>
                           <a
                             href={link.href}
-                            className="group flex items-center gap-2 text-text-secondary hover:text-primary-400 transition-colors duration-200"
+                            className="group flex items-center gap-3 text-text-secondary hover:text-primary-400 transition-colors duration-200 text-base"
                           >
                             <span>{link.name}</span>
-                            <ArrowUpRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                            <ArrowUpRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                           </a>
                         </li>
                       ))}
@@ -150,26 +150,26 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-surface-tertiary/30 py-8">
+        <div className="border-t border-surface-tertiary/30 py-10">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="flex flex-col md:flex-row justify-between items-center gap-6"
+            className="flex flex-col md:flex-row justify-between items-center gap-8"
           >
             {/* Copyright */}
-            <p className="text-text-tertiary text-sm">
+            <p className="text-text-tertiary text-base">
               &copy; {currentYear} Genesis Launch AI. All rights reserved.
             </p>
 
             {/* Legal Links */}
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-8">
               {legalLinks.map((link, index) => (
                 <Link
                   key={index}
                   to={link.href}
-                  className="text-sm text-text-tertiary hover:text-text-secondary transition-colors duration-200"
+                  className="text-base text-text-tertiary hover:text-text-secondary transition-colors duration-200"
                 >
                   {link.name}
                 </Link>
