@@ -141,7 +141,7 @@ const TechnologiesSection = () => {
       icon: <Database className="w-8 h-8" />,
       description: "Cloud-based database platform for organizing and managing business data",
       features: ["Relational Database", "API Integration", "Collaborative Workflows"],
-      color: "accent",
+      color: "secondaru",
       experience: "Expert"
     }
   ];
