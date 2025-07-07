@@ -25,8 +25,8 @@ const TestimonialsSection = () => {
       image: "/images/AI Chat Agent Image.png",
       category: "Chat Agents",
       testimonial: "The AI chat agent has transformed our customer service. We've seen a 60% reduction in response times and our customer satisfaction scores have never been higher. Genesis Launch delivered exactly what they promised.",
-      author: "Sarah Johnson",
-      role: "Customer Experience Director",
+      author: "Kris Giannakos",
+      role: "Business Owner",
       rating: 5,
       metrics: [
         { label: "Response Time Reduction", value: "60%", icon: <CheckCircle className="w-4 h-4" /> },
