@@ -16,7 +16,7 @@ const AboutSection = () => {
 
   const statistics = [
     {
-      value: "99%",
+      value: "95%",
       label: "Client Satisfaction",
       description: "Happy customers worldwide"
     },
