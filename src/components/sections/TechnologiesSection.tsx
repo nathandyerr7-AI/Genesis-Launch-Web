@@ -207,7 +207,7 @@ const TechnologiesSection = () => {
   };
 
   return (
-    <section id="technologies" className="py-20 lg:py-28 bg-background-secondary relative overflow-hidden" ref={ref}>
+    <section id="technologies" className="py-20 lg:py-28 bg-background-primary relative overflow-hidden" ref={ref}>
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-surface-tertiary/50 to-transparent"></div>
