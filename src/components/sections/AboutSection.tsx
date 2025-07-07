@@ -16,10 +16,6 @@ const AboutSection = () => {
 
   const statistics = [
     {
-      value: "Results Driven",
-      description: "Committed to delivering measurable ROI and business outcomes."
-    },
-    {
       value: "99%",
       label: "Client Satisfaction",
       description: "Happy customers worldwide"
