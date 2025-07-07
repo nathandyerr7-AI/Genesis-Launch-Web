@@ -160,7 +160,7 @@ export function BackgroundPaths({
                     transition={{ duration: 2 }}
                     className="max-w-4xl mx-auto"
                 >
-                    <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-8 tracking-tighter">
+                    <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold mb-8 tracking-tighter">
                         {words.map((word, wordIndex) => (
                             <span
                                 key={wordIndex}
