@@ -31,15 +31,6 @@ const Footer = () => {
         { name: "Contact", href: "/#contact" },
       ]
     },
-    {
-      title: "Resources",
-      links: [
-        { name: "Documentation", href: "/docs" },
-        { name: "API Reference", href: "/api" },
-        { name: "Support Center", href: "/support" },
-        { name: "Status Page", href: "/status" },
-      ]
-    }
   ];
 
   const contactInfo = [
@@ -55,31 +46,8 @@ const Footer = () => {
       value: "info@genesislaunch.com",
       href: "mailto:info@genesislaunch.com"
     },
-    {
-      icon: <MapPin className="h-5 w-5" />,
-      label: "Location",
-      value: "Ontario, Canada",
-      href: null
-    }
   ];
 
-  const socialLinks = [
-    {
-      name: "Twitter",
-      href: "https://twitter.com/genesislaunch",
-      icon: <Twitter className="h-5 w-5" />
-    },
-    {
-      name: "LinkedIn",
-      href: "https://linkedin.com/company/genesislaunch",
-      icon: <Linkedin className="h-5 w-5" />
-    },
-    {
-      name: "GitHub",
-      href: "https://github.com/genesislaunch",
-      icon: <Github className="h-5 w-5" />
-    }
-  ];
 
   const legalLinks = [
     { name: "Privacy Policy", href: "/privacy-policy" },
