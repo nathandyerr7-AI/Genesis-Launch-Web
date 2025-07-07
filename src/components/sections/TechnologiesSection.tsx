@@ -136,7 +136,7 @@ const TechnologiesSection = () => {
     },
     {
       id: 12,
-      name: "Vercel",
+      name: "",
       category: "infrastructure",
       icon: <Cloud className="w-8 h-8" />,
       description: "Frontend cloud platform for deploying modern web applications",
