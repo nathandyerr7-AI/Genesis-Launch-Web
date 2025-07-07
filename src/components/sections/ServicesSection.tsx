@@ -121,7 +121,6 @@ const ServicesSection = () => {
       <div className="absolute inset-0">
         <div className="absolute -left-[15%] top-[25%] w-[40%] h-[40%] rounded-full bg-gradient-radial from-primary-500/8 via-primary-500/4 to-transparent blur-3xl"></div>
         <div className="absolute -right-[10%] bottom-[15%] w-[35%] h-[35%] rounded-full bg-gradient-radial from-accent-500/6 via-accent-500/3 to-transparent blur-3xl"></div>
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-surface-tertiary/50 to-transparent"></div>
       </div>
 
       <div className="container relative z-10">

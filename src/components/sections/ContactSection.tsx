@@ -113,7 +113,6 @@ const ContactSection = () => {
       <div className="absolute inset-0">
         <div className="absolute -left-[20%] top-[30%] w-[50%] h-[50%] rounded-full bg-gradient-radial from-primary-500/6 via-primary-500/3 to-transparent blur-3xl" />
         <div className="absolute -right-[15%] bottom-[25%] w-[45%] h-[45%] rounded-full bg-gradient-radial from-accent-500/5 via-accent-500/2 to-transparent blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-px bg-gradient-to-r from-transparent via-surface-tertiary/30 to-transparent" />
       </div>
 
       <div className="container relative z-10">
