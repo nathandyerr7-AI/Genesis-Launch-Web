@@ -26,6 +26,11 @@ const AboutSection = () => {
       description: "Round-the-clock assistance"
     },
     {
+      value: "99%",
+      label: "Uptime Guarantee",
+      description: "Reliable service you can count on"
+    },
+    {
       value: "3+",
       label: "Years Experience",
       description: "In AI development"
