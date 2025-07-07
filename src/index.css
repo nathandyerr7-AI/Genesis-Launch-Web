@@ -98,7 +98,7 @@
 
   /* Add royal blue hint to bg-background class */
   .bg-background {
-    background: linear-gradient(135deg, #0a0b14 0%, #0a0b16 50%, #0b0c18 100%) !important;
+    background: linear-gradient(135deg, #0a0b14 0%, #0c0e1c 30%, #0e1024 70%, #10122c 100%) !important;
   }
 
   /* Enhanced typography hierarchy */
