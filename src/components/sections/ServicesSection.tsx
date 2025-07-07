@@ -140,7 +140,7 @@ const ServicesSection = () => {
             <span className="text-sm font-medium text-text-secondary">Our Expertise</span>
           </div>
 
-          <h2 className="section-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-1">
+          <h2 className="section-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-1 mt-7">
             <span className="text-gradient-primary">Comprehensive AI</span>
             <br />
             <span className="text-text-primary">Solutions</span>
