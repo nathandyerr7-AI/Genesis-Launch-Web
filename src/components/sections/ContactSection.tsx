@@ -73,15 +73,8 @@ const ContactSection = () => {
       title: "Call Us",
       content: "+1 (613) 862-1476",
       link: "tel:+16138621476",
-      description: "Mon-Fri, 9am-6pm EST"
+      description: "Sun-Sun, 9am-12pm EST"
     },
-    {
-      icon: <MapPin className="h-6 w-6" />,
-      title: "Location",
-      content: "Ontario, Canada",
-      link: null,
-      description: "Serving clients globally"
-    }
   ];
 
   const containerVariants = {
