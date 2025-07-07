@@ -308,8 +308,21 @@ export default {
         // Glass morphism effect
         '.glass': {
           'backdrop-filter': 'blur(16px) saturate(180%)',
-          'background-color': 'rgba(255, 255, 255, 0.05)',
+          'background-color': 'rgba(255, 255, 255, 0.03)',
           'border': '1px solid rgba(255, 255, 255, 0.1)',
+        },
+        
+        // Enhanced glass effects
+        '.glass-subtle': {
+          'backdrop-filter': 'blur(8px) saturate(150%)',
+          'background-color': 'rgba(255, 255, 255, 0.02)',
+          'border': '1px solid rgba(255, 255, 255, 0.05)',
+        },
+        
+        '.glass-strong': {
+          'backdrop-filter': 'blur(24px) saturate(200%)',
+          'background-color': 'rgba(255, 255, 255, 0.08)',
+          'border': '1px solid rgba(255, 255, 255, 0.15)',
         },
         
         // Text gradient utilities
