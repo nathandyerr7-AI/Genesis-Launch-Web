@@ -103,7 +103,7 @@ npm run dev
 2. Customize styling in `src/components/widgets/VoiceflowAgent.css`
 
 ### Contact Form Webhook
-Update the webhook URL in `src/components/sections/ContactSection.tsx` to your preferred form handler (Make.com, Zapier, etc.)
+Update the webhook URL in `src/components/sections/ContactSection.tsx` to your preferred form handler (Make.com)
 
 ## 📱 Sections Overview
 
