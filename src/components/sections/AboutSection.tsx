@@ -223,50 +223,6 @@ const AboutSection = () => {
           </motion.div>
         </div>
 
-        {/* Company Values */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-        >
-          <div className="text-center mb-12">
-            <h3 className="text-3xl lg:text-4xl font-bold text-text-primary mb-4">
-              Our Values
-            </h3>
-            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-              The principles that guide everything we do and shape how we approach every project
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {values.map((value, index) => {
-              const colorClasses = getColorClasses(value.color);
-              
-              return (
-                <motion.div
-                  key={index}
-                  variants={itemVariants}
-                  className="card card-hover p-6 lg:p-8 bg-surface-primary/50 backdrop-blur-sm border-surface-tertiary/30 group"
-                >
-                  <div className={`w-12 h-12 ${colorClasses.bg} ${colorClasses.border} border rounded-lg flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300`}>
-                    <div className={colorClasses.icon}>
-                      {value.icon}
-                    </div>
-                  </div>
-                  
-                  <h4 className="text-xl font-semibold text-text-primary mb-3 group-hover:text-primary-400 transition-colors duration-300">
-                    {value.title}
-                  </h4>
-                  
-                  <p className="text-text-secondary leading-relaxed">
-                    {value.description}
-                  </p>
-                </motion.div>
-              );
-            })}
-          </div>
-        </motion.div>
-
         {/* Bottom CTA */}
         <motion.div 
           className="text-center mt-16 lg:mt-20"
