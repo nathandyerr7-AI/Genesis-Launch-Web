@@ -83,7 +83,7 @@ const TestimonialsSection = () => {
   const activeCase = caseStudies[activeIndex];
 
   return (
-    <section id="testimonials" className="py-20 lg:py-28 bg-background-primary relative overflow-hidden" ref={ref}>
+    <section id="testimonials" className="py-20 lg:py-28 bg-background relative overflow-hidden" ref={ref}>
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute -left-[15%] top-[25%] w-[40%] h-[40%] rounded-full bg-gradient-radial from-accent-500/6 via-accent-500/3 to-transparent blur-3xl"></div>
