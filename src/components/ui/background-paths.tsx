@@ -122,7 +122,7 @@ export function BackgroundPaths({
         if (isConnecting) {
             return {
                 text: "Connecting...",
-                className: "bg-gradient-to-r from-primary/80 via-accent/80 to-primary/80 bg-[length:200%_200%]",
+                className: "bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 bg-[length:200%_200%] animate-pulse",
                 icon: (
                     <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
                 )
@@ -132,14 +132,14 @@ export function BackgroundPaths({
         if (isCallActive) {
             return {
                 text: "End Call",
-                className: "bg-gradient-to-r from-red-600 to-red-400",
+                className: "bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600",
                 icon: <Phone className="w-5 h-5 animate-pulse" />
             };
         }
         
         return {
             text: "Talk to AI",
-            className: "bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_200%]",
+            className: "bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 hover:from-blue-500 hover:via-purple-500 hover:to-indigo-500 bg-[length:200%_200%]",
             icon: <Phone className="w-5 h-5 animate-bounce" />
         };
     };

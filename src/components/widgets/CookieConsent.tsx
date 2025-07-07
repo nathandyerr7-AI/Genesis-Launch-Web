@@ -28,13 +28,13 @@ const CookieConsent = ({ onAccept, onClose }: CookieConsentProps) => {
           <div className="flex gap-2">
             <button
               onClick={onAccept}
-              className="bg-primary text-white px-4 py-1.5 rounded text-sm hover:bg-primary/90 transition-colors"
+              className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-4 py-1.5 rounded-md text-sm font-medium transition-all duration-200 transform hover:scale-105 shadow-lg"
             >
               Accept
             </button>
             <button
               onClick={onClose}
-              className="text-text-secondary hover:text-white transition-colors"
+              className="bg-gray-600 hover:bg-gray-500 text-white p-1.5 rounded-md transition-all duration-200 transform hover:scale-105 shadow-md"
             >
               <X size={20} />
             </button>
