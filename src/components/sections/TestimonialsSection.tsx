@@ -212,11 +212,11 @@ const TestimonialsSection = () => {
 
                 {/* Testimonial Quote */}
                 <div className="relative">
-                  <div className="absolute -top-2 -left-2 w-8 h-8 text-primary-500/20">
+                  <div className="absolute -top-2 -left-2 w-8 h-8 text-primary-500/30 z-10">
                     <Quote className="w-full h-full" />
                   </div>
                   
-                  <blockquote className="text-xl lg:text-2xl font-medium text-text-primary leading-relaxed pl-6 border-l-4 border-primary-500/30">
+                  <blockquote className="relative text-xl lg:text-2xl font-medium text-text-primary leading-relaxed pl-6 border-l-4 border-primary-500/30 z-0">
                     "{activeCase.testimonial}"
                   </blockquote>
                   
