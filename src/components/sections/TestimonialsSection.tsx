@@ -21,7 +21,7 @@ const TestimonialsSection = () => {
       client: "Ilias and Sons",
       industry: "E-Commerce",
       project: "AI Customer Service Agent",
-      description: "We designed and implemented a comprehensive e-commerce chat agent that provides customers with 24/7 support, intelligent product recommendations, and real-time order tracking capabilities. The solution streamlines customer service operations while significantly enhancing the shopping experience.",
+      description: "We designed and implemented a comprehensive e-commerce chat agent that provides customers with 24/7 support, intelligent RAG product recommendations, and real-time order tracking capabilities. The solution streamlines customer service operations while significantly enhancing the shopping experience.",
       image: "/images/AI Chat Agent Image.png",
       category: "Chat Agents",
       testimonial: "The AI chat agent has transformed our customer service. We've seen a 60% reduction in response times and our customer satisfaction scores have never been higher. Genesis Launch delivered exactly what they promised.",
