@@ -16,8 +16,8 @@ const AboutSection = () => {
 
   const statistics = [
     {
-      label: "Projects Delivered",
-      description: "Successful AI implementations"
+      value: "Results Driven",
+      label: "Committed to delivering measurable ROI and business outcomes.",
     },
     {
       value: "99%",
