@@ -40,7 +40,7 @@ const TestimonialsSection = () => {
         "Order Tracking",
         "Multi-language Support",
       ],
-      technologies: ["Voiceflow", "OpenAI", "Shopify API", "Analytics"],
+      technologies: ["Voiceflow", "OpenAI", "Shopify API", "Make"],
       timeline: "2 weeks",
       roi: "300%"
     },
