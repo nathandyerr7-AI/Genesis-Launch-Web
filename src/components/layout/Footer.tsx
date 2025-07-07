@@ -223,11 +223,6 @@ const Footer = () => {
                 </Link>
               ))}
             </div>
-
-            {/* Built with badge */}
-            <div className="flex items-center gap-2 text-xs text-text-tertiary">
-              <span>Built by Genesis Launch</span>
-            </div>
           </motion.div>
         </div>
 
