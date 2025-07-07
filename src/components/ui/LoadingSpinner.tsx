@@ -68,6 +68,26 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   );
 };
 
+/**
+ * A simple skeleton loader for sections.
+ */
+export const SectionSkeletonLoader: React.FC<{className?: string}> = ({ className }) => {
+  return (
+    <div className={`container mx-auto px-4 py-16 md:py-20 lg:py-24 ${className}`}>
+      <Skeleton className="h-12 w-1/2 mx-auto mb-8" />
+      <Skeleton className="h-8 w-3/4 mx-auto mb-12" />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <Skeleton className="h-64" />
+        <Skeleton className="h-64" />
+        <Skeleton className="h-64" />
+        <Skeleton className="h-64 md:hidden lg:block" />
+        <Skeleton className="h-64 hidden md:block" />
+        <Skeleton className="h-64 hidden md:block" />
+      </div>
+    </div>
+  );
+};
+
 interface PulseLoaderProps {
   size?: 'sm' | 'md' | 'lg';
   variant?: 'primary' | 'secondary' | 'white';

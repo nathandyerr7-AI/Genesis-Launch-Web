@@ -182,34 +182,7 @@ export const useToast = () => {
   return context;
 };
 
-/**
- * Convenience toast functions
- */
-export const toast = {
-  success: (title: string, message?: string, options?: Partial<Toast>) => {
-    const context = useContext(ToastContext);
-    if (context) {
-      context.showToast({ type: 'success', title, message, ...options });
-    }
-  },
-  error: (title: string, message?: string, options?: Partial<Toast>) => {
-    const context = useContext(ToastContext);
-    if (context) {
-      context.showToast({ type: 'error', title, message, ...options });
-    }
-  },
-  warning: (title: string, message?: string, options?: Partial<Toast>) => {
-    const context = useContext(ToastContext);
-    if (context) {
-      context.showToast({ type: 'warning', title, message, ...options });
-    }
-  },
-  info: (title: string, message?: string, options?: Partial<Toast>) => {
-    const context = useContext(ToastContext);
-    if (context) {
-      context.showToast({ type: 'info', title, message, ...options });
-    }
-  },
-};
+// Remove the problematic direct `toast` export.
+// The functionality will be provided by the `useToast` hook directly.
 
 export default ToastProvider;

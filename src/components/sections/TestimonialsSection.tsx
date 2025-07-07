@@ -138,6 +138,7 @@ const TestimonialsSection = () => {
                       src={activeCase.image} 
                       alt={`${activeCase.client} project`}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background-primary/60 via-transparent to-transparent"></div>
                     

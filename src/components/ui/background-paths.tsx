@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Link, useNavigate } from "react-router-dom";
+// Button component is not used directly here, but Button styling from index.css might be.
+// import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 import { Phone } from "lucide-react";
 import Vapi from "@vapi-ai/web";
+import { useToast } from "@/components/ui/Toast"; // Import useToast
 
 function FloatingPaths({ position }: { position: number }) {
     const paths = Array.from({ length: 36 }, (_, i) => ({
@@ -63,6 +65,7 @@ export function BackgroundPaths({
     const [isCallActive, setIsCallActive] = useState(false);
     const [isConnecting, setIsConnecting] = useState(false);
     const [vapi, setVapi] = useState<any>(null);
+    const { showToast } = useToast(); // Get showToast from useToast
 
     useEffect(() => {
         const vapiInstance = new Vapi(import.meta.env.VITE_VAPI_PUBLIC_KEY);
@@ -79,6 +82,11 @@ export function BackgroundPaths({
 
         vapiInstance.on("error", (error) => {
             console.error("Vapi error:", error);
+            showToast({
+                type: "error",
+                title: "Voice Agent Error",
+                message: "An unexpected error occurred with the voice agent. Please try again later.",
+            });
             setIsConnecting(false);
             setIsCallActive(false);
         });
@@ -113,6 +121,11 @@ export function BackgroundPaths({
                 await vapi.start(import.meta.env.VITE_VAPI_ASSISTANT_ID);
             } catch (error) {
                 console.error("Failed to start call:", error);
+                showToast({
+                    type: "error",
+                    title: "Call Initiation Failed",
+                    message: "Could not start the call. Please check your connection or try again.",
+                });
                 setIsConnecting(false);
             }
         }

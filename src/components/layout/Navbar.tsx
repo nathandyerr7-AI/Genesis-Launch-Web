@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useScrollSpy } from '@/lib/useScrollSpy'; // Import the custom hook
+import { cn } from '@/lib/utils'; // For conditional classes
 
 /**
  * Enhanced Navbar with sophisticated design and micro-interactions
@@ -13,6 +15,58 @@ const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const navigate = useNavigate();
 
+  // Define navLinks at the component scope
+  const navLinks = [
+    { name: 'Home', href: '/' },
+    {
+      name: 'Services',
+      href: '/#services',
+      id: 'services', // ID for scroll spy
+      dropdown: [
+        { name: 'AI Automations', href: '/#services' },
+        { name: 'Chat Agents', href: '/#services' },
+        { name: 'Voice Agents', href: '/#services' },
+        { name: 'Website Development', href: '/#services' },
+      ]
+    },
+    { name: 'Technologies', href: '/#technologies', id: 'technologies' },
+    { name: 'Case Studies', href: '/#testimonials', id: 'testimonials' },
+    { name: 'About', href: '/#about', id: 'about' },
+  ];
+
+  const sectionTargetIds = navLinks
+    .map(link => link.id)
+    .filter(id => id !== undefined) as string[];
+
+  const activeSection = useScrollSpy({ sectionIds: sectionTargetIds, rootMargin: "-40% 0px -60% 0px" });
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      setScrolled(offset > 20);
+    };
+
+    const handleClickOutside = (event: MouseEvent) => {
+      // Logic to close dropdown if click is outside.
+      // This needs to be more specific to prevent conflicts if other click-outside logic exists.
+      // For now, let's assume it's okay or refine later if issues arise.
+      if (activeDropdown) {
+          const dropdownElement = document.querySelector(`[data-dropdown-name="${activeDropdown}"]`);
+          if (dropdownElement && !dropdownElement.contains(event.target as Node)) {
+            setActiveDropdown(null);
+          }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    document.addEventListener('mousedown', handleClickOutside); // Use mousedown to catch before click potentially opens new dropdown
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [activeDropdown]);
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -21,7 +75,8 @@ const Navbar = () => {
     setIsOpen(false);
     setActiveDropdown(null);
     if (path.startsWith('/#')) {
-      const element = document.querySelector(path.substring(1));
+      const elementId = path.substring(2); // Remove '/#'
+      const element = document.getElementById(elementId);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
@@ -30,41 +85,8 @@ const Navbar = () => {
     }
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const offset = window.scrollY;
-      setScrolled(offset > 20);
-    };
-
-    const handleClickOutside = () => {
-      setActiveDropdown(null);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    document.addEventListener('click', handleClickOutside);
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('click', handleClickOutside);
-    };
-  }, []);
-
-  const navLinks = [
-    { name: 'Home', href: '/' },
-    { 
-      name: 'Services', 
-      href: '/#services',
-      dropdown: [
-        { name: 'AI Automations', href: '/#services' },
-        { name: 'Chat Agents', href: '/#services' },
-        { name: 'Voice Agents', href: '/#services' },
-        { name: 'Website Development', href: '/#services' },
-      ]
-    },
-    { name: 'Technologies', href: '/#technologies' },
-    { name: 'Case Studies', href: '/#testimonials' },
-    { name: 'About', href: '/#about' },
-  ];
+  // Removed duplicated useEffect and navLinks definition here.
+  // The correct ones are already defined above.
 
   return (
     <motion.header 
@@ -102,10 +124,13 @@ const Navbar = () => {
             {navLinks.map((link, index) => (
               <div key={link.name} className="relative" onClick={(e) => e.stopPropagation()}>
                 {link.dropdown ? (
-                  <div className="relative">
+                  <div className="relative" data-dropdown-name={link.name}>
                     <button
                       onClick={() => setActiveDropdown(activeDropdown === link.name ? null : link.name)}
-                      className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-text-secondary hover:text-primary-400 transition-colors duration-200 rounded-lg hover:bg-surface-secondary/50"
+                      className={cn(
+                        "flex items-center gap-1 px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-lg hover:bg-surface-secondary/50",
+                        activeSection === link.id ? "text-primary-400 bg-surface-secondary/50" : "text-text-secondary hover:text-primary-400"
+                      )}
                     >
                       {link.name}
                       <ChevronDown 
