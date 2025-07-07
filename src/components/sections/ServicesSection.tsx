@@ -114,7 +114,7 @@ const ServicesSection = () => {
   return (
     <section 
       id="services" 
-      className="py-20 lg:py-28 bg-background-secondary relative overflow-hidden" 
+      className="py-20 lg:py-28 bg-background-primary relative overflow-hidden" 
       ref={ref}
     >
       {/* Enhanced background elements with subtle gradients */}
