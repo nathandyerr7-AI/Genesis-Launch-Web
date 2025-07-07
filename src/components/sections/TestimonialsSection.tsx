@@ -39,8 +39,6 @@ const TestimonialsSection = () => {
         "RAG Product Recommendations", 
         "Order Tracking",
         "Multi-language Support",
-        "Analytics Dashboard",
-        "CRM Integration"
       ],
       technologies: ["Voiceflow", "OpenAI", "Shopify API", "Analytics"],
       timeline: "2 weeks",
