@@ -84,18 +84,18 @@ export default {
 
         // Background - Deep, sophisticated darks
         background: {
-          primary: '#0a0b14',
-          secondary: '#13141f',
-          tertiary: '#1c1d2e',
-          elevated: '#24253a',
+          primary: '#0a0b16',
+          secondary: '#131422',
+          tertiary: '#1c1d32',
+          elevated: '#24253e',
         },
 
         // Surface colors for cards and elevated elements
         surface: {
-          primary: '#1a1b2e',
-          secondary: '#24253a',
-          tertiary: '#2f3046',
-          elevated: '#3a3b52',
+          primary: '#1a1b32',
+          secondary: '#24253e',
+          tertiary: '#2f304a',
+          elevated: '#3a3b56',
         },
 
         // Text hierarchy
