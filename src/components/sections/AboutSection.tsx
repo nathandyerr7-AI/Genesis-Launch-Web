@@ -1,7 +1,6 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import { Shield, Zap, Users, Target, Lightbulb, Award } from 'lucide-react';
 
 /**
  * Enhanced About Section with sophisticated design and comprehensive information
@@ -13,82 +12,6 @@ const AboutSection = () => {
     threshold: 0.1,
     rootMargin: '-50px 0px',
   });
-
-  const values = [
-    {
-      title: "Innovation",
-      description: "We constantly push the boundaries of what's possible with AI technology, developing cutting-edge solutions that give our clients a competitive edge.",
-      icon: <Lightbulb className="w-6 h-6" />,
-      color: "blue"
-    },
-    {
-      title: "Reliability",
-      description: "Our solutions are built to last, with robust architecture and comprehensive testing to ensure consistent performance you can depend on.",
-      icon: <Shield className="w-6 h-6" />,
-      color: "green"
-    },
-    {
-      title: "Performance",
-      description: "Speed and efficiency are at the core of everything we build. Our optimized solutions deliver results faster than traditional approaches.",
-      icon: <Zap className="w-6 h-6" />,
-      color: "yellow"
-    },
-    {
-      title: "Collaboration",
-      description: "We work closely with our clients as partners, ensuring every solution is tailored to their specific needs and business objectives.",
-      icon: <Users className="w-6 h-6" />,
-      color: "purple"
-    },
-    {
-      title: "Precision",
-      description: "Every detail matters. We take a meticulous approach to development, ensuring accuracy and quality in every aspect of our work.",
-      icon: <Target className="w-6 h-6" />,
-      color: "red"
-    },
-    {
-      title: "Excellence",
-      description: "We strive for excellence in everything we do, from initial consultation to final delivery and ongoing support.",
-      icon: <Award className="w-6 h-6" />,
-      color: "indigo"
-    }
-  ];
-
-  const getColorClasses = (color: string) => {
-    const colorMap = {
-      blue: {
-        bg: 'bg-blue-500/10',
-        border: 'border-blue-500/20',
-        icon: 'text-blue-500'
-      },
-      green: {
-        bg: 'bg-green-500/10',
-        border: 'border-green-500/20',
-        icon: 'text-green-500'
-      },
-      yellow: {
-        bg: 'bg-yellow-500/10',
-        border: 'border-yellow-500/20',
-        icon: 'text-yellow-500'
-      },
-      purple: {
-        bg: 'bg-purple-500/10',
-        border: 'border-purple-500/20',
-        icon: 'text-purple-500'
-      },
-      red: {
-        bg: 'bg-red-500/10',
-        border: 'border-red-500/20',
-        icon: 'text-red-500'
-      },
-      indigo: {
-        bg: 'bg-indigo-500/10',
-        border: 'border-indigo-500/20',
-        icon: 'text-indigo-500'
-      }
-    };
-    
-    return colorMap[color as keyof typeof colorMap] || colorMap.blue;
-  };
 
   const statistics = [
     {
