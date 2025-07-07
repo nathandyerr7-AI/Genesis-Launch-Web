@@ -93,19 +93,22 @@ const ServicesSection = () => {
         icon: "text-primary-400 group-hover:text-primary-300",
         bg: "bg-primary-500/10 group-hover:bg-primary-500/15",
         glow: "group-hover:shadow-primary-500/20",
-        accent: "text-primary-400"
+        accent: "text-primary-400",
+        border: "border-primary-500/50"
       },
       accent: {
         icon: "text-accent-400 group-hover:text-accent-300",
         bg: "bg-accent-500/10 group-hover:bg-accent-500/15",
         glow: "group-hover:shadow-accent-500/20",
-        accent: "text-accent-400"
+        accent: "text-accent-400",
+        border: "border-accent-500/50"
       },
       secondary: {
         icon: "text-secondary-400 group-hover:text-secondary-300",
         bg: "bg-secondary-500/10 group-hover:bg-secondary-500/15",
         glow: "group-hover:shadow-secondary-500/20",
-        accent: "text-secondary-400"
+        accent: "text-secondary-400",
+        border: "border-secondary-500/50"
       }
     };
     return colors[color as keyof typeof colors] || colors.primary;
@@ -164,7 +167,7 @@ const ServicesSection = () => {
                 variants={itemVariants}
                 className="group relative"
               >
-                <div className="card card-hover h-full p-6 lg:p-8 flex flex-col bg-surface-primary/50 backdrop-blur-sm border-surface-tertiary/30 hover:border-surface-elevated/50 transition-all duration-300">
+                <div className={`card card-hover h-full p-6 lg:p-8 flex flex-col bg-surface-primary/50 backdrop-blur-sm border-surface-tertiary/30 hover:${colorClasses.border} transition-all duration-500`}>
                   {/* Service Icon */}
                   <div className={`w-16 h-16 lg:w-18 lg:h-18 rounded-xl ${colorClasses.bg} 
                     flex items-center justify-center mb-6 transition-all duration-500 
