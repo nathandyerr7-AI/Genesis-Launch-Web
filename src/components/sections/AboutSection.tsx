@@ -139,7 +139,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section id="about" className="py-20 lg:py-28 bg-backgroung relative overflow-hidden" ref={ref}>
+    <section id="about" className="py-20 lg:py-28 bg-background relative overflow-hidden" ref={ref}>
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute -right-[15%] top-[20%] w-[40%] h-[40%] rounded-full bg-gradient-radial from-primary-500/6 via-primary-500/3 to-transparent blur-3xl"></div>
