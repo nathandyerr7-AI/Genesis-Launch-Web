@@ -16,7 +16,6 @@ const AboutSection = () => {
 
   const statistics = [
     {
-      value: "3",
       label: "Projects Delivered",
       description: "Successful AI implementations"
     },
