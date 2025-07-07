@@ -36,7 +36,7 @@ const TestimonialsSection = () => {
       ],
       features: [
         "24/7 Customer Support",
-        "Product Recommendations", 
+        "RAG Product Recommendations", 
         "Order Tracking",
         "Multi-language Support",
         "Analytics Dashboard",
