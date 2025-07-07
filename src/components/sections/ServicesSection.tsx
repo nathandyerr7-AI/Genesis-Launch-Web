@@ -167,8 +167,8 @@ const ServicesSection = () => {
                 <div className="card card-hover h-full p-6 lg:p-8 flex flex-col bg-surface-primary/50 backdrop-blur-sm border-surface-tertiary/30 hover:border-surface-elevated/50 transition-all duration-300">
                   {/* Service Icon */}
                   <div className={`w-16 h-16 lg:w-18 lg:h-18 rounded-xl ${colorClasses.bg} 
-                    flex items-center justify-center mb-6 transition-all duration-300 
-                    ${colorClasses.glow} group-hover:shadow-lg group-hover:scale-105`}>
+                    flex items-center justify-center mb-6 transition-all duration-500 
+                    ${colorClasses.glow} group-hover:shadow-2xl group-hover:scale-110 group-hover:rotate-3 group-hover:-translate-y-2`}>
                     <div className={`${colorClasses.icon} transition-colors duration-300`}>
                       {service.icon}
                     </div>
@@ -176,20 +176,20 @@ const ServicesSection = () => {
                   
                   {/* Service Content */}
                   <div className="flex-1">
-                    <h3 className="text-xl lg:text-2xl font-semibold mb-4 text-text-primary group-hover:text-text-primary transition-colors duration-300">
+                    <h3 className="text-xl lg:text-2xl font-semibold mb-4 text-text-primary group-hover:text-primary-300 transition-all duration-300 group-hover:translate-x-1">
                       {service.title}
                     </h3>
                     
-                    <p className="text-text-secondary mb-6 leading-relaxed">
+                    <p className="text-text-secondary mb-6 leading-relaxed group-hover:text-text-primary transition-colors duration-300">
                       {service.description}
                     </p>
                     
                     {/* Feature List */}
                     <ul className="space-y-2 mb-6">
                       {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center gap-3 text-sm text-text-secondary">
-                          <div className={`w-1.5 h-1.5 rounded-full ${colorClasses.bg.replace('/10', '/60').replace('/15', '/60')} flex-shrink-0`}></div>
-                          {feature}
+                        <li key={featureIndex} className="flex items-center gap-3 text-sm text-text-secondary group-hover:text-text-primary transition-all duration-300 group-hover:translate-x-2" style={{ transitionDelay: `${featureIndex * 50}ms` }}>
+                          <div className={`w-1.5 h-1.5 rounded-full ${colorClasses.bg.replace('/10', '/60').replace('/15', '/60')} flex-shrink-0 transition-all duration-300 group-hover:scale-150 group-hover:shadow-lg`}></div>
+                          <span className="transition-all duration-300">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -199,11 +199,11 @@ const ServicesSection = () => {
                   <div className="mt-auto">
                     <a 
                       href="#contact" 
-                      className={`inline-flex items-center gap-2 ${colorClasses.accent} hover:underline font-medium transition-colors duration-200 group/link`}
+                      className={`inline-flex items-center gap-2 ${colorClasses.accent} hover:underline font-medium transition-all duration-300 group/link group-hover:translate-x-2 group-hover:font-semibold`}
                     >
                       Learn more
                       <svg 
-                        className="w-4 h-4 transition-transform duration-200 group-hover/link:translate-x-0.5" 
+                        className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:scale-110" 
                         fill="none" 
                         viewBox="0 0 24 24" 
                         stroke="currentColor"
@@ -215,17 +215,23 @@ const ServicesSection = () => {
                   </div>
 
                   {/* Decorative Elements */}
-                  <div className="absolute top-0 right-0 w-20 h-20 opacity-0 group-hover:opacity-5 transition-opacity duration-300 pointer-events-none">
+                  <div className="absolute top-0 right-0 w-20 h-20 opacity-0 group-hover:opacity-10 transition-all duration-500 pointer-events-none group-hover:scale-125 group-hover:rotate-12">
                     <div className={`w-full h-full ${colorClasses.icon.split(' ')[0]}`}>
                       {service.icon}
                     </div>
                   </div>
                   
                   {/* Corner accent */}
-                  <div className="absolute top-0 right-0 w-8 h-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute top-0 right-0 w-8 h-8 opacity-0 group-hover:opacity-100 transition-all duration-500">
                     <div className={`absolute top-0 right-0 w-8 h-0.5 ${colorClasses.bg.replace('bg-', 'bg-').replace('/10', '').replace('/15', '')}`}></div>
                     <div className={`absolute top-0 right-0 w-0.5 h-8 ${colorClasses.bg.replace('bg-', 'bg-').replace('/10', '').replace('/15', '')}`}></div>
                   </div>
+                  
+                  {/* Animated background gradient on hover */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-xl bg-gradient-to-br from-primary-500/20 via-transparent to-accent-500/20 pointer-events-none"></div>
+                  
+                  {/* Subtle glow effect */}
+                  <div className={`absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500 rounded-xl ${colorClasses.glow} blur-xl pointer-events-none`}></div>
                 </div>
               </motion.article>
             );
