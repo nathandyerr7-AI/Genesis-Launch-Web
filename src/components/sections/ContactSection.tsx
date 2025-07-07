@@ -135,7 +135,7 @@ const ContactSection = () => {
           </h2>
           
           <p className="text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl mx-auto">
-            Ready to transform your business with AI? We're here to help you get started on your journey 
+            Ready to launch your business forward with AI? We're here to help you get started on your journey 
             to intelligent automation and growth.
           </p>
         </motion.div>
