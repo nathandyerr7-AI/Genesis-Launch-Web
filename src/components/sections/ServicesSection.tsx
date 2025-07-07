@@ -168,6 +168,7 @@ const ServicesSection = () => {
                 className="group relative"
               >
                 <div className={`card card-hover h-full p-6 lg:p-8 flex flex-col bg-surface-primary/50 backdrop-blur-sm border-surface-tertiary/30 hover:${colorClasses.border} transition-all duration-500`}>
+                <div className={`card card-hover h-full p-6 lg:p-8 flex flex-col bg-surface-primary/50 backdrop-blur-sm border-surface-tertiary/30 hover:border-2 transition-all duration-500 ${service.color === 'primary' ? 'hover:border-primary-500/50' : service.color === 'accent' ? 'hover:border-accent-500/50' : 'hover:border-secondary-500/50'}`}>
                   {/* Service Icon */}
                   <div className={`w-16 h-16 lg:w-18 lg:h-18 rounded-xl ${colorClasses.bg} 
                     flex items-center justify-center mb-6 transition-all duration-500 
