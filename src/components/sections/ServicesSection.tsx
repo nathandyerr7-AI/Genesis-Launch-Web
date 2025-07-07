@@ -224,12 +224,6 @@ const ServicesSection = () => {
                     </div>
                   </div>
                   
-                  {/* Corner accent */}
-                  <div className="absolute top-0 right-0 w-8 h-8 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                    <div className={`absolute top-0 right-0 w-8 h-0.5 ${colorClasses.bg.replace('bg-', 'bg-').replace('/10', '').replace('/15', '')}`}></div>
-                    <div className={`absolute top-0 right-0 w-0.5 h-8 ${colorClasses.bg.replace('bg-', 'bg-').replace('/10', '').replace('/15', '')}`}></div>
-                  </div>
-                  
                   {/* Animated background gradient on hover */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-xl bg-gradient-to-br from-primary-500/20 via-transparent to-accent-500/20 pointer-events-none"></div>
                   
