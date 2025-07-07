@@ -135,6 +135,9 @@ const ServicesSection = () => {
           transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-surface-secondary/50 border
+            className="border-surface-tertiary/30 rounded-full mb-6">
+            <span className="text-sm text-text-secondary">Services</span>
+          </div>
           <h2 className="section-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-1 mt-7">
             <span className="text-text-secondary text-2xl md:text-3xl lg:text-4xl font-medium block mb-2">Our Expertise</span>
             <span className="text-gradient-primary block">Comprehensive AI</span>
