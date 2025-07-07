@@ -37,6 +37,45 @@ const AboutSection = () => {
     }
   ];
 
+  const values = [
+    {
+      icon: <Lightbulb className="w-6 h-6" />,
+      title: "Innovation",
+      description: "We continuously push boundaries to deliver cutting-edge AI solutions that transform businesses.",
+      color: "primary"
+    },
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: "Trust & Security",
+      description: "Your data security and privacy are our top priorities in every solution we develop.",
+      color: "accent"
+    },
+    {
+      icon: <Target className="w-6 h-6" />,
+      title: "Results-Driven",
+      description: "We focus on delivering measurable outcomes that directly impact your business success.",
+      color: "secondary"
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "Collaboration",
+      description: "We work closely with our clients as partners, ensuring solutions that truly fit their needs.",
+      color: "primary"
+    },
+    {
+      icon: <Zap className="w-6 h-6" />,
+      title: "Efficiency",
+      description: "We streamline processes and eliminate bottlenecks to maximize your operational efficiency.",
+      color: "accent"
+    },
+    {
+      icon: <Rocket className="w-6 h-6" />,
+      title: "Growth",
+      description: "Every solution we build is designed to scale with your business and drive sustainable growth.",
+      color: "secondary"
+    }
+  ];
+
 
   const containerVariants = {
     hidden: { opacity: 0 },
