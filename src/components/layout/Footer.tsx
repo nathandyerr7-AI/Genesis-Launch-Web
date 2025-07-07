@@ -226,9 +226,7 @@ const Footer = () => {
 
             {/* Built with badge */}
             <div className="flex items-center gap-2 text-xs text-text-tertiary">
-              <span>Built with</span>
-              <span className="text-primary-400">❤️</span>
-              <span>by Genesis Launch AI</span>
+              <span>Built by Genesis Launch</span>
             </div>
           </motion.div>
         </div>
