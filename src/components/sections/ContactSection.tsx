@@ -108,7 +108,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" ref={ref} className="py-20 lg:py-28 bg-background-primary relative overflow-hidden">
+    <section id="contact" ref={ref} className="py-20 lg:py-28 bg-background relative overflow-hidden">
       {/* Enhanced background effects */}
       <div className="absolute inset-0">
         <div className="absolute -left-[20%] top-[30%] w-[50%] h-[50%] rounded-full bg-gradient-radial from-primary-500/6 via-primary-500/3 to-transparent blur-3xl" />
