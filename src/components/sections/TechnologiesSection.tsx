@@ -136,12 +136,12 @@ const TechnologiesSection = () => {
     },
     {
       id: 12,
-      name: "",
+      name: "Airtable",
       category: "infrastructure",
-      icon: <Cloud className="w-8 h-8" />,
-      description: "Frontend cloud platform for deploying modern web applications",
-      features: ["Global CDN", "Serverless Functions", "Preview Deployments"],
-      color: "secondary",
+      icon: <Database className="w-8 h-8" />,
+      description: "Cloud-based database platform for organizing and managing business data",
+      features: ["Relational Database", "API Integration", "Collaborative Workflows"],
+      color: "accent",
       experience: "Expert"
     }
   ];
