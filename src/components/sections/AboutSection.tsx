@@ -137,12 +137,12 @@ const AboutSection = () => {
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-surface-secondary/50 border border-surface-tertiary/50 rounded-full mb-6">
+          <div className="flex items-center gap-2 px-4 py-2 bg-surface-secondary/50 border border-surface-tertiary/50 rounded-full mb-6 mx-auto w-fit">
             <div className="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></div>
             <span className="text-sm font-medium text-text-secondary">About Us</span>
           </div>
           
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <h2 className="section-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             <span className="text-text-primary">Pioneering the Future of</span>
             <br />
             <span className="text-gradient-primary">Business Intelligence</span>
@@ -181,14 +181,13 @@ const AboutSection = () => {
         </motion.div>
 
         {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 mb-20">
-
+        <div className="flex justify-center mb-20">
           {/* Our Mission */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="card p-8 bg-gradient-to-br from-surface-primary/80 to-surface-secondary/60 backdrop-blur-sm border-surface-tertiary/30"
+            className="card p-8 bg-gradient-to-br from-surface-primary/80 to-surface-secondary/60 backdrop-blur-sm border-surface-tertiary/30 max-w-4xl w-full"
           >
             <h3 className="text-2xl lg:text-3xl font-bold text-text-primary mb-6">
               Our Mission
