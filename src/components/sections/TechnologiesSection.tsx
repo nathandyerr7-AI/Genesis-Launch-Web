@@ -227,7 +227,7 @@ const TechnologiesSection = () => {
             <span className="text-sm font-medium text-text-secondary">Technology Stack</span>
           </div>
           
-          <h2 className="section-header text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <h2 className="section-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             <span className="text-gradient-primary">Cutting-Edge</span>
             <br />
             <span className="text-text-primary">Technologies</span>

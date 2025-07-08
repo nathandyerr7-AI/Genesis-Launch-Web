@@ -121,7 +121,7 @@ const ContactSection = () => {
             <span className="text-sm font-medium text-text-secondary">Get In Touch</span>
           </div>
           
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <h2 className="section-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             <span className="text-text-primary">Let's Build Something</span>
             <br />
             <span className="text-gradient-primary">Amazing Together</span>

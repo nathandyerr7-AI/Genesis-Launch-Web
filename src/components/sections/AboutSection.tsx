@@ -142,7 +142,7 @@ const AboutSection = () => {
             <span className="text-sm font-medium text-text-secondary">About Us</span>
           </div>
           
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <h2 className="section-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             <span className="text-text-primary">Pioneering the Future of</span>
             <br />
             <span className="text-gradient-primary">Business Intelligence</span>

@@ -101,7 +101,7 @@ const TestimonialsSection = () => {
             <span className="text-sm font-medium text-text-secondary">Success Stories</span>
           </div>
           
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <h2 className="section-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             <span className="text-gradient-primary">Client Success</span>
             <br />
             <span className="text-text-primary">Stories</span>
