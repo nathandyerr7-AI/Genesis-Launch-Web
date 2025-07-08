@@ -62,7 +62,7 @@ const Navbar = () => {
       ]
     },
     { name: 'Technologies', href: '/#technologies' },
-    { name: 'Case Studies', href: '/#testimonials' },
+    { name: 'Testimonials', href: '/#testimonials' },
     { name: 'About', href: '/#about' },
   ];
 
