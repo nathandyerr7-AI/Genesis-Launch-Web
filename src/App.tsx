@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import { BackgroundPaths } from './components/ui/background-paths';
@@ -15,9 +16,10 @@ import TermsOfService from './components/pages/TermsOfService';
 import CookieConsent from './components/widgets/CookieConsent';
 
 function HomePage() {
+  const { t } = useTranslation();
   return (
     <>
-      <BackgroundPaths title="Practical AI Solutions That Solve Real Business Problems" />
+      <BackgroundPaths title={t('homePage.title')} />
       <ServicesSection />
       <TechnologiesSection />
       <TestimonialsSection />

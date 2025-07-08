@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
+import LanguageSwitcher from '../ui/LanguageSwitcher';
 import { motion, AnimatePresence } from 'framer-motion';
 
 /**
@@ -151,6 +152,7 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-4">
+            <LanguageSwitcher />
             <button 
               onClick={() => handleNavigation('/#contact')} 
               className="btn btn-primary"
@@ -159,12 +161,14 @@ const Navbar = () => {
             </button>
           </div>
 
-          {/* Mobile menu button */}
-          <button 
-            className="lg:hidden relative z-50 w-10 h-10 flex items-center justify-center rounded-lg text-text-secondary hover:text-text-primary hover:bg-surface-secondary/50 transition-colors duration-200 focus-ring" 
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-          >
+          {/* Mobile menu button and Language Switcher */}
+          <div className="lg:hidden flex items-center">
+            <LanguageSwitcher />
+            <button
+              className="relative z-50 w-10 h-10 flex items-center justify-center rounded-lg text-text-secondary hover:text-text-primary hover:bg-surface-secondary/50 transition-colors duration-200 focus-ring ml-2"
+              onClick={toggleMenu}
+              aria-label="Toggle menu"
+            >
             <AnimatePresence mode="wait">
               {isOpen ? (
                 <motion.div
@@ -189,6 +193,7 @@ const Navbar = () => {
               )}
             </AnimatePresence>
           </button>
+          </div>
         </div>
       </div>
 

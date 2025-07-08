@@ -1,0 +1,7 @@
+{
+  "greeting": "Bonjour, le monde!",
+  "description": "Ceci est un exemple d'application.",
+  "homePage": {
+    "title": "Des solutions d'IA pratiques qui résolvent de vrais problèmes d'affaires"
+  }
+}
