@@ -83,7 +83,7 @@ const Footer = () => {
 
                 {/* Description */}
                 <p className="text-text-secondary mb-10 leading-relaxed max-w-md text-lg">
-                  Transforming businesses with practical AI solutions that solve real problems 
+                  Launching businesses forward with practical AI solutions that solve real problems 
                   and drive measurable growth. Your trusted partner in AI innovation.
                 </p>
 
