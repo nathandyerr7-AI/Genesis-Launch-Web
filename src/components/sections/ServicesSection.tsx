@@ -135,8 +135,8 @@ const ServicesSection = () => {
           transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
         >
           <div className="flex items-center gap-2 px-4 py-2
-             bg-surface-secondary/50 border border-surface-tertiary/50
-             rounded-full mb-6 mx-auto w-fit">
+                           bg-surface-secondary/50 border border-surface-tertiary/50
+                           rounded-full mb-6 mx-auto w-fit">
             <div className="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></div>
               <span className="text-sm font-medium text-text-secondary">Our Expertise</span>
             </div>
