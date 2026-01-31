@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-// import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 // import { Link } from "react-router-dom";
 // import { Phone } from "lucide-react";
 // import Vapi from "@vapi-ai/web";
@@ -146,6 +146,13 @@ export function BackgroundPaths({
 
     // const buttonState = getButtonState();
 
+    const handleStart = () => {
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-background">
             <div className="absolute inset-0">
@@ -198,37 +205,21 @@ export function BackgroundPaths({
                         AI solutions for automations, lead-gen, chat agents, and business growth
                     </motion.p>
 
-                    {/* <motion.div
+                    <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.7, duration: 0.8 }}
                         className="flex items-center justify-center gap-4"
                     >
-                        <motion.button
-                            onClick={handleCallToggle}
-                            disabled={isConnecting}
-                            className={`group relative overflow-hidden rounded-full px-8 py-4
-                            transition-all duration-300 transform hover:scale-105 disabled:cursor-not-allowed
-                            ${buttonState.className} shadow-[0_0_20px_rgba(0,112,243,0.5)]`}
-                            whileHover={!isConnecting ? {
-                                backgroundPosition: ["0% 0%", "100% 100%"],
-                            } : {}}
-                            transition={{
-                                duration: 3,
-                                repeat: isConnecting ? 0 : Infinity,
-                                repeatType: "reverse",
-                            }}
+                        <Button
+                            size="lg"
+                            variant="default" 
+                            className="rounded-full px-12 py-8 text-xl font-bold bg-gradient-to-r from-primary-600 to-accent-600 text-white shadow-[0_0_40px_rgba(var(--primary-500),0.5)] hover:shadow-[0_0_60px_rgba(var(--primary-500),0.7)] hover:from-primary-500 hover:to-accent-500 transition-all duration-300 transform hover:scale-110 active:scale-95"
+                            onClick={handleStart}
                         >
-                            <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
-                            <div className="relative flex items-center gap-3">
-                                {buttonState.icon}
-                                <span className="text-xl font-semibold text-white">
-                                    {buttonState.text}
-                                </span>
-                            </div>
-                            <div className="absolute -inset-1 opacity-30 bg-gradient-to-r from-primary via-accent to-primary blur group-hover:opacity-50 transition-opacity duration-300" />
-                        </motion.button>
-                    </motion.div> */}
+                            Get Started
+                        </Button>
+                    </motion.div>
                 </motion.div>
             </div>
         </div>
