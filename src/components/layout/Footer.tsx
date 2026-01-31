@@ -18,6 +18,8 @@ const Footer = () => {
         { name: "Chat Agents", href: "/#services" },
         { name: "Voice Agents", href: "/#services" },
         { name: "Website Development", href: "/#services" },
+        { name: "Website SEO", href: "/#services" },
+        { name: "eCommerce Solutions", href: "/#services" },
         { name: "Lead Generation", href: "/#services" },
         { name: "CRM Integrations", href: "/#services" },
       ]

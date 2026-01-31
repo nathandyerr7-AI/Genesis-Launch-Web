@@ -59,6 +59,8 @@ const Navbar = () => {
         { name: 'Chat Agents', href: '/#services' },
         { name: 'Voice Agents', href: '/#services' },
         { name: 'Website Development', href: '/#services' },
+        { name: 'Website SEO', href: '/#services' },
+        { name: 'eCommerce Solutions', href: '/#services' },
       ]
     },
     { name: 'Technologies', href: '/#technologies' },

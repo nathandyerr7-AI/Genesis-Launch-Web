@@ -1,5 +1,5 @@
 import React from 'react';
-import { Bot, Mic, Code, Globe, Target, Database } from 'lucide-react';
+import { Bot, Mic, Code, Globe, Target, Database, Search, ShoppingCart } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 
@@ -42,6 +42,20 @@ const ServicesSection = () => {
       description: "Build intelligent, responsive websites with integrated AI features that adapt to user behavior and preferences.",
       features: ["Responsive Design", "AI Integration", "Performance Optimized"],
       color: "primary"
+    },
+    {
+      icon: <Search size={28} />,
+      title: "Website SEO",
+      description: "Optimize your online presence with comprehensive SEO strategies that improve visibility, drive organic traffic, and enhance search rankings.",
+      features: ["Keyword Research & Strategy", "Technical SEO Optimization", "Performance Monitoring & Reporting"],
+      color: "accent"
+    },
+    {
+      icon: <ShoppingCart size={28} />,
+      title: "eCommerce Solutions",
+      description: "Develop and optimize scalable eCommerce platforms with seamless payment integration and inventory management for sustainable sales growth.",
+      features: ["Store Development & Customization", "Payment Gateway Integration", "Inventory Management Solutions"],
+      color: "secondary"
     },
     {
       icon: <Target size={28} />,
