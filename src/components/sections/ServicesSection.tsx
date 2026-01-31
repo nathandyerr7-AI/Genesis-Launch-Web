@@ -53,8 +53,8 @@ const ServicesSection = () => {
     {
       icon: <ShoppingCart size={28} />,
       title: "eCommerce Solutions",
-      description: "Develop and optimize scalable eCommerce platforms with seamless payment integration and inventory management for sustainable sales growth.",
-      features: ["Store Development & Customization", "Payment Gateway Integration", "Inventory Management Solutions"],
+      description: "Develop and optimize scalable eCommerce platforms with seamless crypto payment integration and inventory management for sustainable sales growth.",
+      features: ["Store Development & Optimization", "Lead Generation", "Inventory Management Solutions", "Crypto Payment Integration"],
       color: "secondary"
     },
     {
