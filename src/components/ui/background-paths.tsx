@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Link, useNavigate } from "react-router-dom";
-import { Phone } from "lucide-react";
-import Vapi from "@vapi-ai/web";
+// import { Button } from "@/components/ui/button";
+// import { Link } from "react-router-dom";
+// import { Phone } from "lucide-react";
+// import Vapi from "@vapi-ai/web";
 
 function FloatingPaths({ position }: { position: number }) {
     const paths = Array.from({ length: 36 }, (_, i) => ({
@@ -58,93 +58,93 @@ export function BackgroundPaths({
     title?: string;
 }) {
     const words = title.split(" ");
-    const navigate = useNavigate();
-    const [isOpen, setIsOpen] = useState(false);
-    const [isCallActive, setIsCallActive] = useState(false);
-    const [isConnecting, setIsConnecting] = useState(false);
-    const [vapi, setVapi] = useState<any>(null);
+    // const navigate = useNavigate();
+    // const [isOpen, setIsOpen] = useState(false);
+    // const [isCallActive, setIsCallActive] = useState(false);
+    // const [isConnecting, setIsConnecting] = useState(false);
+    // const [vapi, setVapi] = useState<any>(null);
 
-    useEffect(() => {
-        const vapiInstance = new Vapi(import.meta.env.VITE_VAPI_PUBLIC_KEY);
-        
-        vapiInstance.on("call-start", () => {
-            setIsConnecting(false);
-            setIsCallActive(true);
-        });
+    // useEffect(() => {
+    //     const vapiInstance = new Vapi(import.meta.env.VITE_VAPI_PUBLIC_KEY);
+    //
+    //     vapiInstance.on("call-start", () => {
+    //         setIsConnecting(false);
+    //         setIsCallActive(true);
+    //     });
 
-        vapiInstance.on("call-end", () => {
-            setIsConnecting(false);
-            setIsCallActive(false);
-        });
+    //     vapiInstance.on("call-end", () => {
+    //         setIsConnecting(false);
+    //         setIsCallActive(false);
+    //     });
 
-        vapiInstance.on("error", (error) => {
-            console.error("Vapi error:", error);
-            setIsConnecting(false);
-            setIsCallActive(false);
-        });
+    //     vapiInstance.on("error", (error) => {
+    //         console.error("Vapi error:", error);
+    //         setIsConnecting(false);
+    //         setIsCallActive(false);
+    //     });
 
-        setVapi(vapiInstance);
+    //     setVapi(vapiInstance);
 
-        return () => {
-            if (vapiInstance) {
-                vapiInstance.stop();
-            }
-        };
-    }, []);
+    //     return () => {
+    //         if (vapiInstance) {
+    //             vapiInstance.stop();
+    //         }
+    //     };
+    // }, []);
 
-    const handleNavigation = (path: string) => {
-        setIsOpen(false);
-        if (path.startsWith('/#')) {
-            const element = document.querySelector(path.substring(1));
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
-        } else {
-            navigate(path);
-        }
-    };
+    // const handleNavigation = (path: string) => {
+    //     setIsOpen(false);
+    //     if (path.startsWith('/#')) {
+    //         const element = document.querySelector(path.substring(1));
+    //         if (element) {
+    //             element.scrollIntoView({ behavior: 'smooth' });
+    //         }
+    //     } else {
+    //         navigate(path);
+    //     }
+    // };
 
-    const handleCallToggle = async () => {
-        if (isCallActive) {
-            vapi.stop();
-        } else {
-            setIsConnecting(true);
-            try {
-                await vapi.start(import.meta.env.VITE_VAPI_ASSISTANT_ID);
-            } catch (error) {
-                console.error("Failed to start call:", error);
-                setIsConnecting(false);
-            }
-        }
-    };
+    // const handleCallToggle = async () => {
+    //     if (isCallActive) {
+    //         vapi.stop();
+    //     } else {
+    //         setIsConnecting(true);
+    //         try {
+    //             await vapi.start(import.meta.env.VITE_VAPI_ASSISTANT_ID);
+    //         } catch (error) {
+    //             console.error("Failed to start call:", error);
+    //             setIsConnecting(false);
+    //         }
+    //     }
+    // };
 
-    const getButtonState = () => {
-        if (isConnecting) {
-            return {
-                text: "Connecting...",
-                className: "bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 bg-[length:200%_200%] animate-pulse",
-                icon: (
-                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                )
-            };
-        }
-        
-        if (isCallActive) {
-            return {
-                text: "End Call",
-                className: "bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600",
-                icon: <Phone className="w-5 h-5 animate-pulse" />
-            };
-        }
-        
-        return {
-            text: "Talk to AI",
-            className: "bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 hover:from-blue-500 hover:via-purple-500 hover:to-indigo-500 bg-[length:200%_200%]",
-            icon: <Phone className="w-5 h-5 animate-bounce" />
-        };
-    };
+    // const getButtonState = () => {
+    //     if (isConnecting) {
+    //         return {
+    //             text: "Connecting...",
+    //             className: "bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 bg-[length:200%_200%] animate-pulse",
+    //             icon: (
+    //                 <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+    //             )
+    //         };
+    //     }
+    //
+    //     if (isCallActive) {
+    //         return {
+    //             text: "End Call",
+    //             className: "bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600",
+    //             icon: <Phone className="w-5 h-5 animate-pulse" />
+    //         };
+    //     }
+    //
+    //     return {
+    //         text: "Talk to AI",
+    //         className: "bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 hover:from-blue-500 hover:via-purple-500 hover:to-indigo-500 bg-[length:200%_200%]",
+    //         icon: <Phone className="w-5 h-5 animate-bounce" />
+    //     };
+    // };
 
-    const buttonState = getButtonState();
+    // const buttonState = getButtonState();
 
     return (
         <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-background">
@@ -198,7 +198,7 @@ export function BackgroundPaths({
                         AI solutions for automations, lead-gen, chat agents, and business growth
                     </motion.p>
 
-                    <motion.div
+                    {/* <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.7, duration: 0.8 }}
@@ -207,7 +207,7 @@ export function BackgroundPaths({
                         <motion.button
                             onClick={handleCallToggle}
                             disabled={isConnecting}
-                            className={`group relative overflow-hidden rounded-full px-8 py-4 
+                            className={`group relative overflow-hidden rounded-full px-8 py-4
                             transition-all duration-300 transform hover:scale-105 disabled:cursor-not-allowed
                             ${buttonState.className} shadow-[0_0_20px_rgba(0,112,243,0.5)]`}
                             whileHover={!isConnecting ? {
@@ -228,7 +228,7 @@ export function BackgroundPaths({
                             </div>
                             <div className="absolute -inset-1 opacity-30 bg-gradient-to-r from-primary via-accent to-primary blur group-hover:opacity-50 transition-opacity duration-300" />
                         </motion.button>
-                    </motion.div>
+                    </motion.div> */}
                 </motion.div>
             </div>
         </div>
